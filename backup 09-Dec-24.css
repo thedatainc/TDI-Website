@@ -1,0 +1,2165 @@
+:root {
+    --color-text: #005bc1;
+    --color-description: #555;
+    --color-white: #fff;
+    --sec1-color: #EFEEE5;
+    --sec2-color: #f3f0ec;
+    --sec3-color: #f3f0ec;
+    --footer-color: #41f650;
+    --hover-color: #f0a800;
+    --nav-link-color: #0b4696;
+    --font-color-cards: #e7dddd;
+    --header-footer-color: rgba(150, 192, 251, 0.899);
+    --color-button: #f0a800;
+    --color-button-hover: #d89000;
+    --contact-form-border: #ddd;
+}
+
+
+body {
+
+    background-color: var(--color-white);
+}
+
+
+/* Apply outfit to headings */
+h1, h2, h3, h4, h5, h6,p {
+    font-family: 'Outfit', sans-serif;
+}
+
+/******************************************** Header Styling **************************/
+header {
+    width: 100%;
+    font-family: 'outfit', sans-serif;
+}
+
+/* Top Header Section */
+.header-top {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Container */
+.logo-container-header {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Aligns the content (logo) to the left */
+    align-items: center; /* Centers content vertically */
+    padding-left: 10px;
+}
+
+.logo-container-header img {
+    max-height: 100px; /* Adjust logo size */   
+}
+
+/* Info Section */
+.info-container-header {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between each info item */
+    flex: 3;
+}
+
+.info-item-header {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.icon-header {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Social Media Section */
+.social-media-container-header {
+    display: flex;
+    align-items: center;
+}
+
+.social-container-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between social media icons */
+}
+
+.social-icon-header img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon-header img:hover {
+    transform: scale(1.1);
+}
+
+/* Bottom Navigation Bar */
+.header-bottom {
+    background-color: #0056b3; /* Blue background for the bottom navigation bar */
+    padding: 10px 0;
+}
+
+.nav-container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Navigation Links */
+.nav-links-header {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links-header li {
+    list-style: none;
+}
+
+.nav-links-header a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links-header a:hover {
+    background-color: #004080; /* Darker blue on hover */
+}
+
+/**************************************************Hamburger Menu**************************************************/
+
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+  }
+  
+  /* Show hamburger on smaller screens */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Flexbox to display vertically stacked bars */
+    }
+  
+    /* Hide navigation links initially on mobile */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px; /* Adjust based on header height */
+      right: 0;
+      background-color: var(--header-footer-color);
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    /* Display navigation links when the hamburger is clicked */
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
+  /* Animation to turn the hamburger into a close "X" */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+
+/******************************************************* Call to Action Line & Link ********************************************/
+/* Main container styling */
+.call-to-action {
+    text-align: center; /* Center-align the text */
+    font-family: 'Outfit', sans-serif; /* Use consistent font */
+    font-size: 1.5rem; /* Reduce the font size */
+    line-height: 1.5; /* Adjust line height for readability */
+    color: var(--color-description); /* Use a subtle gray color */
+    margin-top: 80px; /* Add spacing around the section */
+}
+
+/* Inline hyperlink styling */
+.call-to-action a {
+    color: var(--color-text); /* Blue color for the link */
+    text-decoration: underline; /* Underline the link */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Add a hover effect */
+}
+
+.call-to-action a:hover {
+    color: var(--color-description); /* Darker blue on hover */
+}
+
+/**************************************************** Left and Right Sections ************************************/
+
+  /* Left Section: Heading */
+.section-left {
+    flex: 1; /* Take up equal space */
+    display: flex; /* Use flexbox for vertical alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Align the heading text to the center */   
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif; /* Modern font */
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: 600; /* Bold heading */
+    color: var(--color-text); /* Blue color */
+    line-height: 1.5; /* Tighter spacing between lines */
+    margin-bottom: 0; /* Remove extra space below */
+    text-align: left; /* Align text to the left */
+}
+
+/* Right Section: Description */
+.section-right {
+    flex: 2.5; /* Larger space for the description */
+    text-align: left; /* Align text to the left */
+    font-size: 1.5rem !important; /* Standard font size */
+    color: var(--color-description) !important; /* Neutral dark gray color for text */
+}
+
+.section-description {
+    max-width: 150%; /* Allow the description to use the full width of the container */
+}
+
+.section-description p {
+    font-family: 'Outfit', sans-serif; /* Modern font */
+    line-height: 1.8; /* Better readability */
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+    width: 100%; /* Expand the paragraph width */
+}
+
+@media (max-width: 768px) {
+    .section-4-layout {
+      flex-direction: column; /* Stack sections vertically */
+      text-align: center; /* Center-align content */
+    }
+
+    .section-left,
+    .section-right {
+      flex: none; /* Reset flex properties */
+      width: 100%; /* Full width for both sections */
+      text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .section-description p {
+      text-align: justify; /* Justify text for better readability */
+    }
+}
+
+/***********************************************Call Button/ Learn More Button******************************************************/
+.btn {
+    background-color:  #005bc1;;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px; /* Fully rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    display: inline-block;
+    font-family: 'Outfit', sans-serif; /* Modern font */
+}
+
+.video-content .btn {
+    background-color: #005bc1;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #003f63;
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/****************************************Action Links*************************************************************/
+
+/* Discover Button - Default State */
+.action-link {
+    display: block; /* Ensures the button spans the width of its container */
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    background-color: transparent; /* No background */
+    color: var(--color-text); /* Primary text color */
+    padding: 0px 0px; /* Add padding for spacing */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Emphasized text */
+    text-align: center; /* Center text */
+    padding: 15px 0; /* Add vertical padding */
+    border-radius: 30px; /* Remove rounded corners */
+    transition: all 0.10s ease; /* Smooth hover effect */
+    text-align: center; /* Center text inside the button */
+    width: 100%; /* Button spans the full width of the card */
+}
+
+/* Hover Effect */
+.action-link:hover {
+    background-color: #005792; /* Blue background */
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none; /* Ensure no underline */
+    padding: 15px 0px; /* Increase padding for a larger rectangle */
+    border-radius: 30px; /* Optional: Adjust rounded corners */
+}
+
+/*********************************************** Index Section-1 Styling *****************************************/
+/* Startup Section Styling */
+.startup-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #f1f8fe, #e9eef5); /* Subtle gradient */
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content .sub-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color:var(--color-text);
+}
+
+.text-content .main-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0.5rem 0;
+    color:var(--color-text);
+}
+
+.text-content .description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--color-description);
+    margin-bottom: 2rem;
+}
+
+
+.image-content {
+    max-width: 45%;
+    position: relative;
+}
+
+.image-content .isometric-image {
+    width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .startup-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 1rem;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+    }
+
+    .text-content .main-heading {
+        font-size: 3rem;
+    }
+
+    .image-content {
+        margin-top: 2rem;
+    }
+}
+
+
+/******************************************************** Index Section-2 Styling *******************************************************/
+
+/* Section Styling */
+.services-section-2 {
+    padding: 50px 20px;
+    background-color: #f5f7fa; /* Light background color */
+    
+}
+
+/* Services Container */
+.services-container-section-2 {
+    display: flex;
+    justify-content: space-between; /* Space out the two cards */
+    align-items: stretch;
+    flex-wrap: nowrap; /* Prevent wrapping since there are only two cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    gap: 100px; /* Adds consistent spacing between the two cards */
+    width: 1200px; /* Fixed width */
+    height: 400px; /* Adjust height based on content */
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+/* Service Card Styling */
+.service-card-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment of all items */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text alignment */
+    padding: 20px;
+    background-color: #ffffff; /* Adds a white background to each card */
+    border-radius: 35px; /* Rounded corners for a card-like appearance */
+    box-shadow: 0 35px 50px rgba(0.3, 0.3, 0.3, 0.1); /* Subtle shadow for depth */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: calc(50% - 20px); /* Adjust the width (50% for two cards per row) */
+    margin-bottom: 50px; /* Space between cards */`
+    overflow: hidden;
+    height: 110%;
+    min-height: 350px; 
+}
+
+.service-card-section-2:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 16px 23px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover for a more dynamic effect */
+}
+
+/* Service Icon */
+.service-card-section-2 .service-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+}
+
+/* Card Title */
+.service-card-section-2 h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 10px;   
+}
+
+/* Card Description */
+.service-card-section-2 p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-description);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    margin-top: 30px; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container-section-2 {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align stacked cards */
+    }
+
+    .service-card-section-2 {
+        width: 90%; /* Full width on smaller screens */
+        max-width: 400px; /* Prevent the card from being too wide */
+        margin-bottom: 20px; /* Adds space between stacked cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-2-text {
+        font-size: 1rem; /* Slightly smaller font size for small devices */
+        padding: 1.5rem 0.5rem; /* Reduced padding on smaller screens */
+    }
+}
+
+/*************************************************************Index Section-3*********************************************************************/
+
+.section-3 {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.container-section-3-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-container-section-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 90px;
+    column-gap: 40px;
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 70px auto; /* Center the container */
+}
+
+.card-section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures space distribution top to bottom */
+    height: 100%; /* Full height to allow justify-content to take effect */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card-section-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon-section-3 img {
+    width: 110px;
+    height: 100px;
+    margin-bottom: -20px;
+}
+
+.card-section-3 h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.card-section-3 p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: var(--color-description);
+}
+
+@media (max-width: 768px) {
+    .cards-container-section-3 {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container-section-3 {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
+    }
+}
+
+
+/****************************************** Video ***************************/
+.video-section {
+    position: relative;
+    padding: 6rem 2rem;
+    background-image: url('/images/video section/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-content {
+    max-width: 45%;
+    text-align: left;
+}
+
+.video-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+.video-main-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.video-main-title .video-highlight {
+    color: #ffc038;
+}
+
+.description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+}
+
+.video-contact-us-button {
+    margin-top: 1.5rem;
+    background-color: #005792;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.video-contact-us-button:hover {
+    background-color: #00315d;
+    transform: translateY(-2px);
+}
+
+.video-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjust the max-width to fit the circle size */
+}
+
+.video-centered-play-button {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, 54%);
+    cursor: pointer;
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+}
+
+.video-play-link .video-centered-play-button {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.video-play-link:active .video-centered-play-button {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for screens smaller than 600px */
+@media (max-width: 600px) {
+    .video-centered-play-button {
+        width: 60px;  /* Reduce size on smaller screens */
+        height: 60px;  /* Reduce size on smaller screens */
+    }
+}
+/*******************************************Index Section-4************************************/
+.section-4 {
+    padding: 4rem 0;
+}
+
+.section-4-container {
+    text-align: center; /* Center-aligns the text */
+    max-width: 800px; /* Restrict width for better readability */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding-bottom: 2rem; /* Adds space below the text */
+}
+
+/* General Layout for Section */
+.section-4-layout {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Space out the left and right sections */
+    align-items: flex-start; /* Align content to the top */
+    gap: 20px; /* Add space between the sections */
+    max-width: 1200px; /* Restrict total width */
+    margin: 0 auto; /* Center the layout */
+    padding: 20px 0; /* Add vertical spacing */
+    gap: 2rem;
+}
+
+/* Partner cards container */
+.partner-cards-container-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards below the text */
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Each partner card */
+.partner-card-4 {
+    width: clac(33.333% - 1rem); /* Three cards per row with gap */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Control the width of each card */
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.partner-card-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo section with consistent size */
+.partner-logo-section-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* You can adjust the background */
+    padding: 40px;
+    height: 100px; /* Fixed height for uniformity */
+    width: 100%;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.partner-logo-4 {
+    max-width: 125px; /* Adjust as per your layout */
+    height: auto;
+}
+
+.partner-info-section-4 {
+    text-align: center;
+    padding: 20px;
+    flex-grow:1;
+    background-color: #fff; /* White background for text */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.partner-info-section-4 h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.partner-info-section-4 p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .partner-card-4 {
+        width: calc(50% - 1rem); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-card-4 {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-4 p {
+        font-size: 0.9rem; /* Slightly reduce font size on smaller screens */
+        padding: 0 1rem; /* Add padding for better spacing */
+    }
+}
+/******************************************** Index Section-5 *******************************************/
+
+/* Integrated Platforms Section Styling */
+.section-5 {
+    padding: 4rem 0;
+    background-color: #f5f7fa; /* Light background for contrast */
+    text-align: center;
+}
+
+.section-5-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Align left and right sections horizontally */
+    justify-content: space-between; /* Add space between left and right sections */
+    align-items: flex-start; /* Align sections to the top */
+    gap: 2rem; /* Space between the left and right sections */
+}
+
+
+/* Cards Container */
+.platform-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center all cards */
+    gap: 1rem; /* Space between cards */
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Individual Platform Card */
+.platform-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    padding: 20px;
+    width: calc(33.333% - 1rem); /* Three cards per row */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+}
+
+/* Platform Logo */
+.platform-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 0.25rem;
+}
+
+/* Platform Name */
+.platform-card h3 {
+    font-family: 'outfit', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Platform Description */
+.platform-card p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.sec5-container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically (optional) */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px 0; /* Add vertical padding */
+    text-align: center; /* Center text within the container */
+}
+
+
+
+/* Contact Us Button Container */
+.sec5-contact-button-container {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if needed) */
+    width: 100%; /* Full width */
+    margin: 20px auto; /* Add spacing above and below */
+}
+
+
+/* Contact Us Button Styling */
+.sec5-contact-us-button {
+    background-color: #005792;
+    color: #fff;
+    font-family: 'outfit', sans-serif;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px; /* Fully rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    display: inline-block;
+    
+}
+
+/* Hover Effect */
+.sec5-contact-us-button:hover {
+    background-color: #00315d; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.section-5-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #005792;
+    text-align: center;
+    margin: 50px auto 10px;
+    max-width: 1200px; /* Adjust this value to control width */
+    width: 100%; /* Allows full-width within max-width constraints */
+    display: block; /* Flex isn't necessary unless aligning child elements */
+    
+    
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .platform-card {
+        width: calc(50% - 1rem); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .platform-card {
+        width: 100%; /* Full-width cards on smaller screens */
+    }
+}
+
+
+/************************************************Index Section-6 ******************************************/
+
+.section-6-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Align left and right sections horizontally */
+    justify-content: space-between; /* Add space between left and right sections */
+    align-items: flex-start; /* Align sections to the top */
+    gap: 2rem; /* Space between the left and right sections */
+    
+}
+
+.custom-brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between brand cards */
+    margin: 3rem auto;
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin-bottom: 1px;
+    
+}
+
+.custom-brand-card {
+    flex: 0 1 200px; /* Adjust size according to your layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color:#fff !important;
+    
+}
+
+.custom-brand-card img {
+    max-width: 50%; /* Ensures images do not exceed the card size */
+    height: auto;
+}
+
+.custom-brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/************************************************Section-7**************************************************/
+.section-7 {
+    background-image: url('/images/backgrounds/1.png'); /* Update with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 130px 0; /* Adjust padding to fit your design */
+    text-align: center;
+    color: #ffffff; /* Adjust text color based on your design */
+}
+
+  .section-7-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+  .section-7-title {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-bottom: -20px;
+    font-family: 'outfit', sans-serif;
+    color: var(--color-text);
+    
+  }
+  
+  .section-7-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--color-description);
+    text-align: center;
+    margin-top: 0; /* Reduce or eliminate top margin */
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+  
+  .section-7-button {
+    font-family: 'outfit', sans-serif;
+    background-color: #004b93; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 15px; /* Rounded corners for the button */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .section-7-button:hover {
+    background-color: var(--color-text); /* Darker shade on hover */
+  }
+
+/************************************************Footer Styling*********************************************/
+
+.footer {
+    background-color: #fff; /***** Footer Background ******/
+    padding: 20px;
+    color: #1f7bd2;
+    text-align: center;
+    }
+
+.footer .container {
+    display: flex;
+    justify-content: center; /* Centers the Columns */
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1px;
+    }
+
+/* Specific Styling for Footer Headings */
+.footer-title {
+    font-family: 'outfit', sans-serif; /* Font family for headings */
+    font-size: 1rem; /* Font size for headings */
+    font-weight: 500; /* Make headings bold */
+    color: var(--color-text); /* Text color */
+    text-align: center; /* Align heading text to the left */
+    margin-bottom: 1rem; /* Space below the heading */
+    text-align: center;
+}
+
+.footer-column {
+    flex-grow: 0; /* Allow columns to grow as needed */
+    flex-basis: calc(0% - 10px); /* Adjust based on the number of columns */
+    text-align: center;
+    padding: 0.5rem; /* Minimal padding inside each column */
+    margin:0;
+        
+}
+
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+    font-size: 0.5rem; /* Set font size for the list item itself */
+}
+
+.footer-column ul li a {
+    font-family: 'outfit', sans-serif; /* Font family for headings */
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.9rem !important;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--hover-color); /* Change color on hover */
+}
+
+/******************************************* Footer Line ***************************************/
+
+.footer-line {
+    border: none;
+    border-top: 2px solid #555; /* Line Color */
+    margin: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #000000;
+    padding-bottom: 0; /* Removes extra padding and fixed the issue */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    /*justify-content: center; /* Ensure the links are centered */
+}
+
+.footer-links li {
+    display: inline-block; /* Ensure they stay inline */
+}
+
+
+.footer-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    transition: color 0.3s;
+    padding: 0 10px; /* Add some padding between links */
+   /* display: inline; */
+}
+
+
+.footer-links a:hover {
+    color: var(--hover-color); /* Hover effect */
+}
+
+/* Center the entire footer content below the line */
+
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center; /* Aligns vertically in the center */
+    flex-wrap: nowrap; /* Ensures they don't break to a new line */
+    font-size: 10px;
+    padding: 10px 0;
+    gap: 20px; /* Adds space between elements */
+}
+
+.footer-bottom p,
+.footer-links {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+/*********************************************Logo and Social Media Container **********************************/
+
+.footer-logo-social {
+    flex-basis: 20%; /* Adjust this width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the logo and icons */
+    justify-content: flex-start;
+    padding: 0;
+    padding: 1rem; /* Add padding to the container */
+    margin-right: 0.1rem;
+}
+
+.logo-img {
+    max-width: 70px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 1rem; /* Space between logo and icons */
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 1rem; /* Adjust space between icons */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-social ul li a i {
+    font-size: 2rem; /* Adjust icon size */
+    color: var(--color-text); /* Use the defined text color */
+    transition: color 0.3s ease;
+}
+
+.footer-social ul li a:hover i {
+    color: var(--hover-color); /* Change color on hover */
+}
+
+.footer-social ul li a img {
+    width: 20px;  /* Adjust this value to make the icons smaller */
+    height: auto; /* Let the height adjust proportionally to the width */
+    transition: transform 0.3s ease;
+}
+
+.footer-column h4,
+.footer-links {
+    display: block;
+}
+
+/* Update this section to ensure vertical alignment in desktop view */
+@media (min-width: 769px) {
+    .footer-column {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .footer-column .footer-title .toggle-icon {
+        display: none; /* Hide the + icon on desktop view */
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding-left: 0;
+        display: block; /* Ensure vertical layout */
+        font-size: 0.5rem; /* Set font size for the list item itself */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 0.5rem;
+        display: block; /* Align the list items vertically */
+    }
+
+    .footer-column ul li a {
+        display: block; /* Ensure vertical alignment */
+        text-decoration: none;
+        font-size: 1rem; /* Consistent font size */
+        color: var(--color-description);
+    }
+
+    .footer-column ul li a:hover {
+        color: var(--hover-text); /* Add hover effect */
+        text-decoration: underline; /* Add underline effect */
+    }
+
+    .footer .container {
+        display: flex;
+        justify-content: space-between; /* Spread out the columns */
+        align-items: flex-start; /* Align items at the top */
+    }
+}
+
+/* Keep the mobile styles intact */
+@media (max-width: 768px) {
+    /* Existing mobile styles */
+    .footer .container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        font-size: 1.5rem; /* Reduce heading font size for mobile */
+    }
+
+    .footer-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: block; /* Ensure vertical layout */
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+        font-size: 1rem; /* Reduce link font size for mobile */
+    }
+
+    .footer-column ul {
+        display: none; /* Hide links initially */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .footer-links.hidden {
+        max-height: 0;
+    }
+
+    .footer-links:not(.hidden) {
+        display: block;
+        max-height: 500px;
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .toggle-icon {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+}
+
+/*********************************************************** for Brands Page *****************************************************/
+
+/****************************************************** Section-1 Styling for Brands **************************************************/
+/* Section 1: General Styling */
+.section-1-brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary); /* Set to match the background color in your example */
+    padding: 4rem 2rem;
+    color: var(--color-text); /* Text Color */
+}
+
+.section-1-container-brands {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Container Styling */
+.left-container-brands {
+    width: 55%; /* Adjust width to your layout */
+}
+
+.channel-heading-brands {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.main-heading-brands {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.2rem;
+    display: inline-block;
+}
+
+
+
+.subheading-brands {
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-description);
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* Right Banner Styling */
+.right-banner-container-brands {
+    background-color: #F6F1ED;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 350px; /* Default: auto adjusts based on content */
+    min-height: 200px; /* Minimum height for the container */
+    max-height: 900px; /* Maximum height, adjust as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow for 3D effect */
+}
+
+.banner-content-brands p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-description);
+}
+
+.partner-badge-brands {
+    background-color: #E1D9CE;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1rem;
+   
+}
+
+.banner-content-brands h3 {
+    font-family: 'outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+ }
+
+
+.right-banner-container-brands {
+    background-color: #F6F1ED; /* Light beige background */
+    padding: 2rem;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%; /* Adjust width to match your layout */
+    
+    /* 3D shadow effect */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 15px 20px rgba(0, 0, 0, 0.19);
+    transform: perspective(800px) rotateX(2deg) rotateY(-2deg); /* Slight 3D rotation for depth */
+    transition: transform 0.3s ease; /* Smooth transition when hovered */
+}
+
+/* Add a slight elevation effect on hover */
+.right-banner-container-brands:hover {
+    transform: perspective(100px) rotateX(0deg) rotateY(0deg); /* On hover, straighten the container for emphasis */
+}
+
+/*********************************************** Section-2 Styling for Brands *****************************************/
+.section-2-brands {
+    background-color: #f9f9f9; /* Light grey background for the section */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.section-title-brands {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem; /* Increased size for better visibility */
+    font-weight: 700;
+    color: #0056b3; /* Blue color for titles */
+    margin-bottom: 20px; /* More space below the title */
+    
+}
+
+.partner-cards-container-brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align cards */
+    gap: 2rem; /* Adjust spacing between cards */
+    margin-top: 1rem; /* Ensure space between title and cards */
+    padding: 0 1rem; /* Add padding for consistent alignment */
+}
+
+/* Each partner card */
+.partner-card-brands {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%; /* Control the width of each card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.partner-card-brands:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo section with consistent size */
+.partner-logo-section-brands {
+    display: flex;
+    flex-direction: column; /* Stack icon and heading vertically */
+    align-items: center; /* Center-align them */
+    text-align: center; /* Ensure text alignment matches */
+    gap: 0.5rem; /* Add space between icon and heading */
+}
+
+.partner-card-brands:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Top section with logo */
+.partner-logo-section-brands {
+    background-color: #f5f5f5; /* Light background for logo */
+    padding: 2rem;
+    text-align: center;
+}
+
+.partner-logo-brands {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Bottom section with text */
+.partner-info-section-brands {
+    text-align: center;
+    padding: 20px;
+    flex-grow:1;
+    background-color: #fff; /* White background for text */
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.partner-info-section-brands h3 {
+    font-family: 'outfit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.partner-info-section-brands p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .partner-card-brands {
+        width: calc(50% - 1rem); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-card-brands {
+        width: 100%; /* Full-width cards on mobile */
+    }
+}
+
+
+
+/*********************************************** Page: Brands - Services for Brands *****************************************/
+
+.brands-section-3 {
+    background-color: #f9f9f9; /* Light grey background for the section */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.brands-section-3-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment of all content */
+}
+
+.brands-section-3-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem; /* Increased size for better visibility */
+    font-weight: 700;
+    color: #0056b3; /* Blue color for titles */
+    margin-bottom: 20px; /* More space below the title */
+    
+}
+
+.brands-section-3-section-description {
+    font-family: 'Outfit', sans-serif;
+    color: #666; /* Standard grey for text */
+    font-size: 1.5rem; /* Larger text size for readability */
+    margin-bottom: 3rem; /* More space below the description */
+    max-width: 90%; /* Slightly reduced from 100% for better text alignment */
+    text-align: center;
+    
+}
+
+/* Ensuring that the cards container only uses a single column for display */
+.brands-section-3-service-cards-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr; /* Ensure one column per row */
+    gap: 50px; /* Space between rows (cards) */
+    justify-items: center; /* Center align cards within the container */
+    width: 100%; /* Ensure full width */
+    max-width: 600px; /* Optional: limit the width of the cards container */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+/* Adjusting service cards to be larger and more prominent */
+.brand-service-card {
+    box-sizing: border-box;
+    width: 100%; /* Full width within the container */
+    max-width: 100%; /* Ensure card fills the available space */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 50px; /* Rounded corners */
+    text-align: center; /* Center align text and icons */
+    padding: 1.5rem; /* Add padding inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+.brand-service-card img {
+    width: 80px; /* Consistent icon size */
+    height: auto;
+    margin-bottom: 1rem; /* Space below the icon */
+    
+}
+
+.brand-service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced margin for a tighter look */
+    color: #0056b3; /* Blue color for headings */
+    font-size: 1.8rem; /* Larger font size for headings */
+}
+
+.brand-service-card p {
+    color: #666; /* Grey color maintained from previous sections */
+    font-size: 1.5rem; /* Larger text size for better readability */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+@media (max-width: 768px) {
+    .brand-section-4-service-card {
+        width: 100%; /* Full width cards on smaller screens */
+        margin: 1rem 0; /* Adjust spacing for mobile layout */
+        padding: 1.5rem; /* Slightly reduced padding on smaller devices */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow for subtle effect */
+    }
+}
+
+
+/*********************************************** Section-1 Styling for Retailers *****************************************/
+
+.section-1-retailers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 4rem 2rem;
+    color: var(--color-text);
+}
+
+.section-1-container-retailers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Container Styling */
+.left-container-retailers {
+    width: 55%;
+}
+
+.channel-heading-retailers {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.main-heading-retailers {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.2rem;
+    display: inline-block;
+}
+
+.subheading-retailers {
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-description);
+    font-size: 1.3rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* Right Banner Styling */
+.right-banner-container-retailers {
+    background-color: #F6F1ED;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 350px; /* Default: auto adjusts based on content */
+    min-height: 200px; /* Minimum height for the container */
+    max-height: 900px; /* Maximum height, adjust as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adding shadow for 3D effect */
+}
+
+
+.banner-content-retailers p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    color: var(--color-description);
+}
+
+.right-banner-container-retailers {
+    background-color: #F6F1ED; /* Light beige background */
+    padding: 2rem;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%; /* Adjust width to match your layout */
+    
+    /* 3D shadow effect */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 15px 20px rgba(0, 0, 0, 0.19);
+    transform: perspective(800px) rotateX(2deg) rotateY(-2deg); /* Slight 3D rotation for depth */
+    transition: transform 0.3s ease; /* Smooth transition when hovered */
+}
+
+.right-banner-container-retailers:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/*************************************************************** Retailers Section-3 *************************************************/
+
+.retailers-section-3 {
+    background-color: #f9f9f9; /* Light grey background for the section */
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.retailers-section-3-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center alignment of all content */
+}
+
+.retailers-section-3-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem; /* Increased size for better visibility */
+    font-weight: 600;
+    color: var(--color-text); /* Blue color for titles */
+    margin-bottom: -10px; /* More space below the title */
+}
+
+.retailers-section-3-section-description {
+    font-family: 'Outfit', sans-serif;
+    color: #666; /* Standard grey for text */
+    font-size: 1.5rem; /* Larger text size for readability */
+    margin-bottom: 3rem; /* More space below the description */
+    max-width: 90%; /* Slightly reduced from 100% for better text alignment */
+    text-align: center;
+}
+
+/* Ensuring that the cards container only uses a single column for display */
+.retailers-section-3-service-cards-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr; /* Ensure one column per row */
+    row-gap: 90px; /* Adds spacing between rows (top and bottom cards) */
+    justify-items: center; /* Center align cards within the container */
+    width: 100%; /* Ensure full width */
+    max-width: 600px; /* Optional: limit the width of the cards container */
+    margin: 0 auto; /* Center the container on the page */
+    
+}
+
+/* Adjusting service cards to be larger and more prominent */
+.service-card {
+    box-sizing: border-box;
+    width: 100%; /* Full width within the container */
+    max-width: 100%; /* Ensure card fills the available space */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center align text and icons */
+    padding: 1.5rem; /* Add padding inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+    box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.5); /* Adding shadow for 3D effect */
+    border-radius: 50px;
+}
+
+.service-card img {
+    width: 80px; /* Consistent icon size */
+    height: auto;
+    margin-bottom: 1rem; /* Space below the icon */
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced margin for a tighter look */
+    color: #0056b3; /* Blue color for headings */
+    font-size: 1.8rem; /* Larger font size for headings */
+}
+
+.service-card p {
+    color: #666; /* Grey color maintained from previous sections */
+    font-size: 1.3rem; /* Larger text size for better readability */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; /* Full width cards on smaller screens */
+        margin: 1rem 0; /* Adjust spacing for mobile layout */
+        padding:
+
+
+/*********************************************** Section-2 Styling for Retailers *****************************************/
+
+.section-2-retailers {
+    padding: 4rem 0;
+}
+
+.section-title-retailers {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.partner-cards-container-retailers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Each partner card */
+.partner-card-retailers {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.partner-card-retailers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo section with consistent size */
+.partner-logo-section-retailers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+}
+
+.partner-logo-retailers {
+    max-width: 100px;
+    height: auto;
+}
+
+.partner-info-section-retailers {
+    text-align: center;
+    padding: 20px;
+}
+
+.partner-info-section-retailers h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.partner-info-section-retailers p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .partner-card-retailers {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-card-retailers {
+        width: 100%;
+    }
+}
+
+/***********************************Contact Us***************************************/
+/************************************************************************************/
+
+
+.contact-page-container-unique {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-heading-unique {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    color: var(--color-text);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-description-unique {
+    text-align: center;
+    color: #666;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form-unique {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group-unique {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label-unique {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+.contact-input-unique,
+.contact-textarea-unique {
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-input-unique:focus,
+.contact-textarea-unique:focus {
+    border-color: var(--color-text);
+}
+
+.contact-submit-btn-unique {
+    background-color: var(--color-button);
+    color: var(--color-text);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-submit-btn-unique:hover {
+    background-color: var(--hover-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-page-container-unique {
+        padding: 1.5rem;
+    }
+
+    .contact-heading-unique {
+        font-size: 2rem;
+    }
+
+    .contact-input-unique,
+    .contact-textarea-unique {
+        font-size: 1rem;
+    }
+}
+
+footer.footer-contact-unique {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer.footer-contact-unique p {
+    margin: 0;
+}
+
+/***********************************Call Schedule***************************************/
+/************************************************************************************/
+.schedule-meeting-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.schedule-heading {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-text);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-description {
+    color: #666;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.booking-iframe-container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/***********************************Privacy Policy***************************************/
+/************************************************************************************/
+.privacy-policy-container {
+    max-width: 1200px; /* Increase container width */
+    margin: 3rem auto; /* Adjust top and bottom margin */
+    padding: 3rem;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8; /* Increase line spacing for readability */
+}
+
+.privacy-heading {
+    font-family: 'Anton', sans-serif;
+    color: var(--color-text);
+    font-size: 3rem; /* Larger font for heading */
+    margin-bottom: 2rem;
+    text-align: center; /* Center the heading */
+}
+
+.privacy-paragraph {
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-text); /* Ensure text color matches theme */
+    font-size: 1.55rem; /* Slightly larger font for better readability */
+    line-height: 1.8; /* Adjust line height for easy reading */
+    text-align: justify; /* Justified text alignment */
+    margin-bottom: 1.8rem; /* Increase space between paragraphs */
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.privacy-paragraph a {
+    color: var(--color-text); /* Match link color to text */
+    text-decoration: none;
+}
+
+.privacy-paragraph a:hover {
+    text-decoration: underline;
+}
+
+/***************************** Terms of Service **********************/
+/*********************************************************************/
+/*********************************************************************/
+.terms-page-container {
+    max-width: 1200px; /* Larger container for better readability */
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.terms-heading {
+    font-family: 'outfit', sans-serif;
+    color: var(--color-text);
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.terms-section {
+    margin-bottom: 2rem;
+}
+
+.terms-subheading {
+    font-family: 'outfit', sans-serif;
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.terms-paragraph {
+    font-family: 'Outfit', sans-serif;
+    color: var(--color-text);
+    font-size: 1.55rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.terms-paragraph ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.terms-paragraph ul li {
+    margin-bottom: 0.5rem;
+}
