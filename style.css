@@ -771,7 +771,7 @@ input[type="checkbox"] {
 }
 /* Play Button Container */
 .play-button {
-    display: inline-flex;
+    display: inline-block; /* Ensure it behaves like a block element for transform */
     justify-content: center;
     align-items: center;
     width: 80px; /* Circle size */
@@ -781,7 +781,7 @@ input[type="checkbox"] {
     cursor: pointer;
     position: relative; /* For triangle positioning */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
     position: absolute; /* Position relative to parent */
     top: 92%; /* Move down */
     left: 30%; /* Move right */
@@ -805,9 +805,8 @@ input[type="checkbox"] {
 
 /* Hover Effect */
 .play-button:hover {
-    transform: scale(1.1) translateY(-5px); /* Slight enlargement */
+    transform: scale(1.1) translateY(-5px); /* Enlarges and moves upward */
     background-color: #e63939; /* Slightly darker red */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
 }
 
 /*******************************************Index Section-4************************************/
