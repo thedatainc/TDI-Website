@@ -805,8 +805,9 @@ input[type="checkbox"] {
 
 /* Hover Effect */
 .play-button:hover {
-    transform: scale(1.1); /* Slight enlargement */
+    transform: scale(1.1) translateY(-5px); /* Slight enlargement */
     background-color: #e63939; /* Slightly darker red */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
 }
 
 /*******************************************Index Section-4************************************/
