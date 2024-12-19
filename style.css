@@ -1120,281 +1120,6 @@ input[type="checkbox"] {
     background-color: var(--color-text); /* Darker shade on hover */
   }
 
-/************************************************Footer Styling*********************************************/
-
-.footer {
-    background-color: #fff; /***** Footer Background ******/
-    padding: 20px;
-    color: #1f7bd2;
-    text-align: center;
-    }
-
-.footer .container {
-    display: flex;
-    justify-content: center; /* Centers the Columns */
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 1px;
-    }
-
-/* Specific Styling for Footer Headings */
-.footer-title {
-    font-family: 'outfit', sans-serif; /* Font family for headings */
-    font-size: 1.2rem; /* Font size for headings */
-    font-weight: 500; /* Make headings bold */
-    color: var(--color-text); /* Text color */
-    text-align: center; /* Align heading text to the left */
-    margin-bottom: 1.2rem; /* Space below the heading */
-    text-align: center;
-}
-
-.footer-column {
-    flex-grow: 0; /* Allow columns to grow as needed */
-    flex-basis: calc(0% - 10px); /* Adjust based on the number of columns */
-    text-align: center;
-    padding: 0.5rem; /* Minimal padding inside each column */
-    margin:0;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-}
-
-.footer-column ul li {
-    margin-bottom: 0.3rem;
-    font-size: 0.5rem; /* Set font size for the list item itself */
-}
-
-.footer-column ul li a {
-    font-family: 'outfit', sans-serif; /* Font family for headings */
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 1.2rem !important;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: var(--hover-color); /* Change color on hover */
-}
-
-/******************************************* Footer Line ***************************************/
-
-.footer-line {
-    border: none;
-    border-top: 2px solid #555; /* Line Color */
-    margin: 20px 0;
-}
-
-.footer-bottom p {
-    margin: 0;
-    color: #000000;
-    padding-bottom: 0; /* Removes extra padding and fixed the issue */
-    font-weight: bold; /* Makes the text bold */
-}
-
-.footer-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    /*justify-content: center; /* Ensure the links are centered */
-}
-
-.footer-links li {
-    display: inline-block; /* Ensure they stay inline */
-}
-
-
-.footer-links a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 14px;
-    transition: color 0.3s;
-    padding: 0 10px; /* Add some padding between links */
-   /* display: inline; */
-}
-
-
-.footer-links a:hover {
-    color: var(--hover-color); /* Hover effect */
-}
-
-/* Center the entire footer content below the line */
-
-.footer-bottom {
-    display: flex;
-    justify-content: center; /* Centers everything */
-    align-items: center; /* Aligns vertically in the center */
-    flex-wrap: nowrap; /* Ensures they don't break to a new line */
-    font-size: 10px;
-    padding: 10px 0;
-    gap: 20px; /* Adds space between elements */
-}
-
-.footer-bottom p,
-.footer-links {
-    margin: 0 20px;
-    display: inline-block;
-}
-
-/*********************************************Logo and Social Media Container **********************************/
-
-.footer-logo-social {
-    flex-basis: 20%; /* Adjust this width as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the logo and icons */
-    justify-content: flex-start;
-    padding: 0;
-    padding: 1rem; /* Add padding to the container */
-    margin-right: 0.1rem;
-}
-
-.logo-img {
-    max-width: 70px; /* Adjust logo size */
-    height: auto;
-    margin-bottom: 1rem; /* Space between logo and icons */
-}
-
-.footer-social ul {
-    display: flex;
-    gap: 1rem; /* Adjust space between icons */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.footer-social ul li a i {
-    font-size: 2rem; /* Adjust icon size */
-    color: var(--color-text); /* Use the defined text color */
-    transition: color 0.3s ease;
-}
-
-.footer-social ul li a:hover i {
-    color: var(--hover-color); /* Change color on hover */
-}
-
-.footer-social ul li a img {
-    width: 20px;  /* Adjust this value to make the icons smaller */
-    height: auto; /* Let the height adjust proportionally to the width */
-    transition: transform 0.3s ease;
-}
-
-.footer-column h4,
-.footer-links {
-    display: block;
-}
-
-/* Update this section to ensure vertical alignment in desktop view */
-@media (min-width: 769px) {
-    .footer-column {
-        flex-grow: 1;
-        text-align: left;
-    }
-
-    .footer-column .footer-title .toggle-icon {
-        display: none; /* Hide the + icon on desktop view */
-    }
-
-    .footer-column ul {
-        list-style: none;
-        padding-left: 0;
-        display: block; /* Ensure vertical layout */
-        font-size: 0.5rem; /* Set font size for the list item itself */
-    }
-
-    .footer-column ul li {
-        margin-bottom: 0.5rem;
-        display: block; /* Align the list items vertically */
-    }
-
-    .footer-column ul li a {
-        display: block; /* Ensure vertical alignment */
-        text-decoration: none;
-        font-size: 1rem; /* Consistent font size */
-        color: var(--color-description);
-    }
-
-    .footer-column ul li a:hover {
-        color: var(--hover-text); /* Add hover effect */
-        text-decoration: underline; /* Add underline effect */
-    }
-
-    .footer .container {
-        display: flex;
-        justify-content: space-between; /* Spread out the columns */
-        align-items: flex-start; /* Align items at the top */
-    }
-}
-
-/* Keep the mobile styles intact */
-@media (max-width: 768px) {
-    /* Existing mobile styles */
-    .footer .container {
-
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-column h4 {
-        font-size: 1.5rem; /* Reduce heading font size for mobile */
-    }
-
-    .footer-links {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: block; /* Ensure vertical layout */
-    }
-
-    .footer-links li {
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-column ul li a {
-        font-size: 1rem; /* Reduce link font size for mobile */
-    }
-
-    .footer-column ul {
-        display: none; /* Hide links initially */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    .footer-links.hidden {
-        max-height: 0;
-    }
-
-    .footer-links:not(.hidden) {
-        display: block;
-        max-height: 500px;
-    }
-
-    .footer-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 1rem;
-        padding: 0.5rem;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .toggle-icon {
-        font-size: 1.5rem;
-        transition: transform 0.3s ease;
-    }
-}
 
 /*********************************************************** for Brands Page *****************************************************/
 /****************************************************** Section-1 Styling for Brands **************************************************/
@@ -1812,8 +1537,6 @@ input[type="checkbox"] {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--color-text);
-    
-    
 }
 
 .contact-banner-text h1 {
@@ -1821,17 +1544,13 @@ input[type="checkbox"] {
     font-weight: 1200;
     margin-bottom: 0.5rem;
     font-family: 'Outfit', sans-serif;
-    
 }
 
 .contact-banner-text p {
     font-size: 1.5rem;
     font-weight: 400;
     font-family: 'Outfit', sans-serif;
-    
 }
-
-
 
 
 /* Responsive Design */
@@ -2085,6 +1804,281 @@ input[type="checkbox"] {
     font-weight: normal;
 }
 
+/************************************************Footer Styling*********************************************/
+
+.footer {
+    background-color: #fff; /***** Footer Background ******/
+    padding: 20px;
+    color: #1f7bd2;
+    text-align: center;
+    }
+
+.footer .container {
+    display: flex;
+    justify-content: center; /* Centers the Columns */
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1px;
+    }
+
+/* Specific Styling for Footer Headings */
+.footer-title {
+    font-family: 'outfit', sans-serif; /* Font family for headings */
+    font-size: 1.2rem; /* Font size for headings */
+    font-weight: 500; /* Make headings bold */
+    color: var(--color-text); /* Text color */
+    text-align: center; /* Align heading text to the left */
+    margin-bottom: 1.2rem; /* Space below the heading */
+    text-align: center;
+}
+
+.footer-column {
+    flex-grow: 0; /* Allow columns to grow as needed */
+    flex-basis: calc(0% - 10px); /* Adjust based on the number of columns */
+    text-align: center;
+    padding: 0.5rem; /* Minimal padding inside each column */
+    margin:0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.3rem;
+    font-size: 0.5rem; /* Set font size for the list item itself */
+}
+
+.footer-column ul li a {
+    font-family: 'outfit', sans-serif; /* Font family for headings */
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1.2rem !important;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--hover-color); /* Change color on hover */
+}
+
+/******************************************* Footer Line ***************************************/
+
+.footer-line {
+    border: none;
+    border-top: 2px solid #555; /* Line Color */
+    margin: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #000000;
+    padding-bottom: 0; /* Removes extra padding and fixed the issue */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    /*justify-content: center; /* Ensure the links are centered */
+}
+
+.footer-links li {
+    display: inline-block; /* Ensure they stay inline */
+}
+
+
+.footer-links a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    transition: color 0.3s;
+    padding: 0 10px; /* Add some padding between links */
+   /* display: inline; */
+}
+
+
+.footer-links a:hover {
+    color: var(--hover-color); /* Hover effect */
+}
+
+/* Center the entire footer content below the line */
+
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center; /* Aligns vertically in the center */
+    flex-wrap: nowrap; /* Ensures they don't break to a new line */
+    font-size: 10px;
+    padding: 10px 0;
+    gap: 20px; /* Adds space between elements */
+}
+
+.footer-bottom p,
+.footer-links {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+/*********************************************Logo and Social Media Container **********************************/
+
+.footer-logo-social {
+    flex-basis: 20%; /* Adjust this width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the logo and icons */
+    justify-content: flex-start;
+    padding: 0;
+    padding: 1rem; /* Add padding to the container */
+    margin-right: 0.1rem;
+}
+
+.logo-img {
+    max-width: 70px; /* Adjust logo size */
+    height: auto;
+    margin-bottom: 1rem; /* Space between logo and icons */
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 1rem; /* Adjust space between icons */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-social ul li a i {
+    font-size: 2rem; /* Adjust icon size */
+    color: var(--color-text); /* Use the defined text color */
+    transition: color 0.3s ease;
+}
+
+.footer-social ul li a:hover i {
+    color: var(--hover-color); /* Change color on hover */
+}
+
+.footer-social ul li a img {
+    width: 20px;  /* Adjust this value to make the icons smaller */
+    height: auto; /* Let the height adjust proportionally to the width */
+    transition: transform 0.3s ease;
+}
+
+.footer-column h4,
+.footer-links {
+    display: block;
+}
+
+/* Update this section to ensure vertical alignment in desktop view */
+@media (min-width: 769px) {
+    .footer-column {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .footer-column .footer-title .toggle-icon {
+        display: none; /* Hide the + icon on desktop view */
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding-left: 0;
+        display: block; /* Ensure vertical layout */
+        font-size: 0.5rem; /* Set font size for the list item itself */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 0.5rem;
+        display: block; /* Align the list items vertically */
+    }
+
+    .footer-column ul li a {
+        display: block; /* Ensure vertical alignment */
+        text-decoration: none;
+        font-size: 1rem; /* Consistent font size */
+        color: var(--color-description);
+    }
+
+    .footer-column ul li a:hover {
+        color: var(--hover-text); /* Add hover effect */
+        text-decoration: underline; /* Add underline effect */
+    }
+
+    .footer .container {
+        display: flex;
+        justify-content: space-between; /* Spread out the columns */
+        align-items: flex-start; /* Align items at the top */
+    }
+}
+
+/* Keep the mobile styles intact */
+@media (max-width: 768px) {
+    /* Existing mobile styles */
+    .footer .container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        font-size: 1.5rem; /* Reduce heading font size for mobile */
+    }
+
+    .footer-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: block; /* Ensure vertical layout */
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+        font-size: 1rem; /* Reduce link font size for mobile */
+    }
+
+    .footer-column ul {
+        display: none; /* Hide links initially */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .footer-links.hidden {
+        max-height: 0;
+    }
+
+    .footer-links:not(.hidden) {
+        display: block;
+        max-height: 500px;
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .toggle-icon {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+}
 
 
 
