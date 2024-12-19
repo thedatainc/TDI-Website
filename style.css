@@ -71,7 +71,7 @@ header {
 .info-item-header {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 1.2rem;
     color: #333;
 }
 
@@ -132,7 +132,7 @@ header {
 
 .nav-links-header a {
     color: #fff;
-    font-size: 15px;
+    font-size: 1.2rem;
     font-weight: 500;
     text-decoration: none;
     padding: 5px 10px;
@@ -1141,11 +1141,11 @@ input[type="checkbox"] {
 /* Specific Styling for Footer Headings */
 .footer-title {
     font-family: 'outfit', sans-serif; /* Font family for headings */
-    font-size: 1rem; /* Font size for headings */
+    font-size: 1.2rem; /* Font size for headings */
     font-weight: 500; /* Make headings bold */
     color: var(--color-text); /* Text color */
     text-align: center; /* Align heading text to the left */
-    margin-bottom: 1rem; /* Space below the heading */
+    margin-bottom: 1.2rem; /* Space below the heading */
     text-align: center;
 }
 
@@ -1155,9 +1155,7 @@ input[type="checkbox"] {
     text-align: center;
     padding: 0.5rem; /* Minimal padding inside each column */
     margin:0;
-        
 }
-
 
 .footer-column ul {
     list-style: none;
@@ -1174,7 +1172,7 @@ input[type="checkbox"] {
     font-family: 'outfit', sans-serif; /* Font family for headings */
     text-decoration: none;
     color: var(--color-text);
-    font-size: 0.9rem !important;
+    font-size: 1.2rem !important;
     transition: color 0.3s ease;
 }
 
