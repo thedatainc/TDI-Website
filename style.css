@@ -57,7 +57,7 @@ header {
 }
 
 .logo-container-header img {
-    max-height: 100px; /* Adjust logo size */   
+    max-height: 130px; /* Adjust logo size */   
 }
 
 /* Info Section */
@@ -95,8 +95,8 @@ header {
 }
 
 .social-icon-header img {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: auto;
     transition: transform 0.2s ease;
 }
 
@@ -1804,7 +1804,7 @@ input[type="checkbox"] {
     font-weight: normal;
 }
 
-/************************************************Footer Styling*********************************************/
+/****************************************************************** Footer Styling ************************************************************/
 
 .footer {
     background-color: #fff; /***** Footer Background ******/
@@ -1864,7 +1864,7 @@ input[type="checkbox"] {
     color: var(--hover-color); /* Change color on hover */
 }
 
-/******************************************* Footer Line ***************************************/
+/************************************************************ Footer Line *******************************************************/
 
 .footer-line {
     border: none;
@@ -1939,7 +1939,7 @@ input[type="checkbox"] {
 }
 
 .logo-img {
-    max-width: 70px; /* Adjust logo size */
+    max-width: 100px; /* Adjust logo size */
     height: auto;
     margin-bottom: 1rem; /* Space between logo and icons */
 }
@@ -1963,7 +1963,7 @@ input[type="checkbox"] {
 }
 
 .footer-social ul li a img {
-    width: 20px;  /* Adjust this value to make the icons smaller */
+    width: 30px;  /* Adjust this value to make the icons smaller */
     height: auto; /* Let the height adjust proportionally to the width */
     transition: transform 0.3s ease;
 }
