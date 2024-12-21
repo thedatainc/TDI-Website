@@ -144,6 +144,105 @@ header {
     background-color: #004080; /* Darker blue on hover */
 }
 
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+    /* Top Header Section */
+    .container-header {
+        flex-wrap: wrap; /* Stack items vertically */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .logo-container-header {
+        margin-bottom: 15px; /* Add spacing between logo and other sections */
+        padding-left: 0;
+    }
+
+    .info-container-header {
+        flex-wrap: wrap; /* Stack info items vertically */
+        gap: 15px; /* Reduce space between items */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .social-media-container-header {
+        margin-top: 15px; /* Add spacing between social media and info section */
+    }
+
+    /* Bottom Navigation Bar */
+    .nav-links-header {
+        flex-wrap: wrap; /* Stack navigation items */
+        gap: 15px; /* Reduce gap between links */
+        justify-content: center; /* Center the navigation links */
+    }
+
+    .nav-links-header a {
+        font-size: 1rem; /* Adjust font size for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container-header img {
+        max-height: 80px; /* Resize logo for very small screens */
+    }
+
+    .info-container-header {
+        font-size: 1rem; /* Reduce font size for info text */
+        gap: 10px; /* Minimize spacing further */
+    }
+
+    .nav-links-header a {
+        font-size: 0.9rem; /* Smaller font size for links */
+    }
+}
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+    /* Top Header Section */
+    .container-header {
+        flex-wrap: wrap; /* Stack items vertically */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .logo-container-header {
+        margin-bottom: 15px; /* Add spacing between logo and other sections */
+        padding-left: 0;
+    }
+
+    .info-container-header {
+        flex-wrap: wrap; /* Stack info items vertically */
+        gap: 15px; /* Reduce space between items */
+        justify-content: center; /* Center items horizontally */
+    }
+
+    .social-media-container-header {
+        margin-top: 15px; /* Add spacing between social media and info section */
+    }
+
+    /* Bottom Navigation Bar */
+    .nav-links-header {
+        flex-wrap: wrap; /* Stack navigation items */
+        gap: 15px; /* Reduce gap between links */
+        justify-content: center; /* Center the navigation links */
+    }
+
+    .nav-links-header a {
+        font-size: 1rem; /* Adjust font size for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container-header img {
+        max-height: 80px; /* Resize logo for very small screens */
+    }
+
+    .info-container-header {
+        font-size: 1rem; /* Reduce font size for info text */
+        gap: 10px; /* Minimize spacing further */
+    }
+
+    .nav-links-header a {
+        font-size: 0.9rem; /* Smaller font size for links */
+    }
+}
+
 /**************************************************Hamburger Menu**************************************************/
 
 /* Hamburger Icon Styling */
