@@ -144,7 +144,6 @@ header {
     background-color: #004080; /* Darker blue on hover */
 }
 
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     /* Logo Section */
@@ -492,6 +491,7 @@ input[type="checkbox"] {
 
 /* Responsive Adjustments for Startup Section */
 @media (max-width: 768px) {
+    
     .startup-section {
         flex-direction: column; /* Stack items vertically */
         padding: 1rem 1rem; /* Reduce padding for smaller screens */
@@ -546,7 +546,6 @@ input[type="checkbox"] {
 .services-section-2 {
     padding: 50px 20px;
     background-color: #f5f7fa; /* Light background color */
-    
 }
 
 /* Services Container */
@@ -563,7 +562,6 @@ input[type="checkbox"] {
     height: 400px; /* Adjust height based on content */
     padding: 20px;
     margin: 0 auto;
-    
 }
 
 /* Service Card Styling */
@@ -647,7 +645,7 @@ input[type="checkbox"] {
     }
 
      /* Adjust Image */
-     .service-card-section-2 .service-icon {
+    .service-card-section-2 .service-icon {
         width: 50px; /* Reduce size for mobile */
         height: 50px; /* Match width */
         margin-bottom: 15px; /* Add some space below the image */
@@ -718,9 +716,7 @@ input[type="checkbox"] {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
-
 
 .card-section-3:hover {
     transform: translateY(-5px);
@@ -795,13 +791,13 @@ input[type="checkbox"] {
     }
 }
 
+}
+
 /*****************************************************************************************/
 /*****************************************************************************************/
 /*************************************** Video *******************************************/
 /*****************************************************************************************/
 /*****************************************************************************************/
-
-
 
 .video-section {
     position: relative;
@@ -969,7 +965,7 @@ input[type="checkbox"] {
 
 /* Each partner card */
 .partner-card-4 {
-    width: clac(33.333% - 1rem); /* Three cards per row with gap */
+    width: calc(33.333% - 1rem); /* Three cards per row with gap */
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
