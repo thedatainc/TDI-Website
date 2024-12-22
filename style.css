@@ -202,6 +202,12 @@ header {
     color: var(--color-description); /* Darker blue on hover */
 }
 
+@media (max-width: 768px) {
+    .call-to-action {
+        display: none !important; /* Ensure it's hidden in mobile view */
+    }
+}
+
 /**************************************************** Left and Right Sections ************************************/
 
   /* Left Section: Heading */
@@ -462,7 +468,6 @@ input[type="checkbox"] {
     margin-bottom: 2rem;
 }
 
-
 .image-content {
     max-width: 45%;
     position: relative;
@@ -485,26 +490,55 @@ input[type="checkbox"] {
     }
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive Adjustments for Startup Section */
+@media (max-width: 768px) {
     .startup-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 4rem 1rem;
+        flex-direction: column; /* Stack items vertically */
+        padding: 1rem 1rem; /* Reduce padding for smaller screens */
+        text-align: center; /* Center-align text for mobile */
     }
 
-    .text-content, .image-content {
-        max-width: 100%;
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center;
+        align-items: center;
     }
 
-    .text-content .main-heading {
-        font-size: 3rem;
+    .text-content {
+        max-width: 100%; /* Take full width */
     }
 
     .image-content {
+        display: none; /* Hide the image on mobile */
+    }
+
+    .text-content .description {
+        display: none; /* Hide the description text */
+    }
+
+    /* Adjust Font Styles for Mobile */
+    .text-content .sub-heading {
+        font-size: 2rem; /* Smaller font size for sub-heading */
+        letter-spacing: 0.1rem; /* Adjust letter spacing */
+        font-weight: 500; /* Change font weight */
+        margin: 1rem 0; /* Reduce top and bottom margin for sub-heading */
+    }
+
+    .text-content .main-heading {
+        font-size: 3rem; /* Adjust font size for main-heading */
+        font-weight: 700; /* Slightly lighter font weight */
+        line-height: 1.2; /* Adjust line height for better spacing */
+        margin: 1rem 0; /* Reduce top and bottom margin */
+    }
+
+    .btn.learn-more-btn {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 1rem 1.5rem; /* Adjust padding for better fit */
         margin-top: 2rem;
     }
+
 }
+
 
 /******************************************************** Index Section-2 Styling *******************************************************/
 
@@ -582,25 +616,66 @@ input[type="checkbox"] {
     margin-top: 30px; 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    /* Center Service Cards */
+    
+    .services-section-2 {
+        padding-bottom: 350px; /* Add padding to ensure enough space below the cards */
+        position: relative; /* Ensure section stays in its layer */
+        z-index: 1; /* Ensure it's above the next section */
+    }
+
     .services-container-section-2 {
+        display: flex; /* Ensure flexbox is used */
         flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center align stacked cards */
+        align-items: center; /* Center align the cards */
+        gap: 20px; /* Adjust spacing between the cards */
+        padding: 5px; /* Add padding for better spacing */
+        margin: 0 auto; /* Center the container */
+        width: 100%; /* Prevent horizontal overflow */
+        box-sizing: border-box; /* Include padding in width */
+        
     }
 
     .service-card-section-2 {
-        width: 90%; /* Full width on smaller screens */
-        max-width: 400px; /* Prevent the card from being too wide */
-        margin-bottom: 20px; /* Adds space between stacked cards */
+        width: calc(100% - 40px); /* Take full width with padding */
+        max-width: 500px; /* Set a max width to prevent cards from being too large */
+        margin: 0 auto; /* Center cards horizontally */
+        height: auto; /* Adjust height based on content */
+        box-sizing: border-box; /* Ensure proper sizing with padding */
+        margin-bottom: 20px; /* Add margin between cards */
     }
-}
 
-@media (max-width: 768px) {
-    .section-2-text {
-        font-size: 1rem; /* Slightly smaller font size for small devices */
-        padding: 1.5rem 0.5rem; /* Reduced padding on smaller screens */
+     /* Adjust Image */
+     .service-card-section-2 .service-icon {
+        width: 50px; /* Reduce size for mobile */
+        height: 50px; /* Match width */
+        margin-bottom: 15px; /* Add some space below the image */
     }
+
+    /* Adjust Title */
+    .service-card-section-2 h3 {
+        font-size: 1.2rem; /* Reduce font size */
+        margin-bottom: 10px; /* Add space below the title */
+    }
+
+    /* Adjust Description */
+    .service-card-section-2 p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin-bottom: 15px; /* Add space below the description */
+        padding: 0 10px; /* Add some padding for better spacing */
+        text-align: center; /* Ensure text stays centered */
+    }
+
+    /* Adjust Button */
+    .service-card-section-2 .action-link {
+        font-size: 1.2rem; /* Reduce button font size */
+        padding: 10px 20px; /* Adjust button padding */
+        margin-top: 10px; /* Add space above the button */
+        display: inline-block; /* Ensure proper spacing */
+    }
+
 }
 
 /*************************************************************Index Section-3*********************************************************************/
@@ -677,6 +752,41 @@ input[type="checkbox"] {
     .cards-container-section-3 {
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
     }
+
+    .section-right p {
+        display: none; /* Hide the description text */
+    }
+
+    .section-left .section-title {
+        font-size: 1.5rem;
+    }
+
+
+    .card-section-3 img {
+        width: 50px; /* Reduce size for mobile */
+        height: 50px; /* Match width */
+        margin-bottom: 15px; /* Add some space below the image */
+    }
+
+    .card-section-3 h3 {
+        font-size: 1.2rem; /* Reduce font size */
+        margin-bottom: 10px; /* Add space below the title */
+
+    }
+
+    .card-section-3 p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin-bottom: 15px; /* Add space below the description */
+        padding: 0 10px; /* Add some padding for better spacing */
+        text-align: center; /* Ensure text stays centered */
+    }
+
+    .card-section-3 .action-link {
+        font-size: 1.2rem; /* Reduce button font size */
+        padding: 0px 0px; /* Adjust button padding */
+        margin-top: 20px; /* Add space above the button */
+        display: inline-block; /* Ensure proper spacing */
 }
 
 @media (max-width: 480px) {
@@ -685,8 +795,14 @@ input[type="checkbox"] {
     }
 }
 
+/*****************************************************************************************/
+/*****************************************************************************************/
+/*************************************** Video *******************************************/
+/*****************************************************************************************/
+/*****************************************************************************************/
 
-/****************************************** Video ***************************/
+
+
 .video-section {
     position: relative;
     padding: 6rem 2rem;
@@ -778,6 +894,43 @@ input[type="checkbox"] {
 .play-button:hover {
     transform: scale(1.1) translateY(-5px); /* Enlarges and moves upward */
     background-color: #e63939; /* Slightly darker red */
+}
+
+@media (max-width: 768px) {
+    .video-content h2 {
+        display: none; /* Hide the description text */
+    }
+
+    .video-content p {
+        display: none; /* Hide the description text */
+    }
+
+    .video-content h4 {
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 50px;
+        color: var(--color-white);
+    }
+
+    .play-button {
+        display: inline-block; /* Ensure it behaves like a block element for transform */
+        justify-content: center;
+        align-items: center;
+        width: 80px; /* Circle size */
+        height: 80px;
+        background-color: #ff4d4d; /* Red color for the button */
+        border-radius: 50%; /* Makes it a circle */
+        cursor: pointer;
+        position: relative; /* For triangle positioning */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
+        position: absolute; /* Position relative to parent */
+        top: 43%; /* Move down */
+        left: 75%; /* Move right */
+        transform: translate(-50%, -50%); /* Center the button */
+        
+    }
 }
 
 /*******************************************Index Section-4************************************/
@@ -874,25 +1027,49 @@ input[type="checkbox"] {
     color: var(--color-text);
 }
 
-/* Responsive design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    /* Center the Section Title */
+    .section-left {
+        text-align: center; /* Center-align the text */
+        margin: 0 auto; /* Center the container horizontally */
+        padding-bottom: 1rem; /* Add spacing below the title */
+    }
+
+    .section-left h2 {
+        font-size: 1.5rem; /* Adjust the font size for mobile */
+        line-height: 1.4; /* Improve spacing between lines */
+        text-align: center; /* Center the heading */
+        margin: 0 auto; /* Center the heading */
+    }
+
+    /* Center the Partner Cards */
+    .partner-cards-container-4 {
+        display: flex;
+        flex-wrap: wrap; /* Allow cards to stack */
+        justify-content: center; /* Center cards horizontally */
+        gap: 1.5rem; /* Adjust spacing between cards */
+        padding: 20px; /* Add padding for better spacing */
+        margin: 0 auto; /* Center the container */
+    }
+
     .partner-card-4 {
-        width: calc(50% - 1rem); /* Two cards per row on tablets */
+        width: calc(100% - 40px); /* Full width with padding */
+        max-width: 300px; /* Set a max width for the cards */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center cards horizontally */
+    }
+
+    .partner-logo-section-4 {
+        height: 100px; /* Adjust height for uniformity */
+    }
+
+    .partner-logo-4 {
+        max-width: 100px; /* Adjust logo size */
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .partner-card-4 {
-        width: 100%; /* One card per row on small screens */
-    }
-}
 
-@media (max-width: 768px) {
-    .section-4 p {
-        font-size: 0.9rem; /* Slightly reduce font size on smaller screens */
-        padding: 0 1rem; /* Add padding for better spacing */
-    }
-}
 /******************************************** Index Section-5 *******************************************/
 .section-5 {
     padding: 4rem 0;
@@ -969,25 +1146,55 @@ input[type="checkbox"] {
     grid-column: 2 / 3; /* Center the last card in the middle column */
 }
 
-/* Responsive design */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    /* Center the Section Title */
+    .section-left {
+        text-align: center;
+        margin: 0 auto; /* Center the container horizontally */
+        padding-bottom: 1rem;
+    }
+
+    .section-left h2 {
+        font-size: 1.5rem; /* Adjust the font size for mobile */
+        line-height: 1.4; /* Improve spacing between lines */
+        text-align: center; /* Center the heading */
+        margin: 0 auto;
+    }
+
+    /* Center the Platform Cards */
+    .platform-cards-container {
+        display: flex; /* Switch to flexbox for better control */
+        flex-wrap: wrap; /* Allow cards to stack */
+        justify-content: center; /* Center cards horizontally */
+        gap: 1.5rem; /* Adjust spacing between cards */
+        padding: 20px; /* Add padding for better spacing */
+        margin: 0 auto; /* Center the container */
+    }
+
     .platform-card {
-        width: calc(50% - 1rem); /* Two cards per row on tablets */
+        width: calc(100% - 40px); /* Full width with padding */
+        max-width: 300px; /* Set a max width for the cards */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center cards horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center card content vertically */
+        align-items: center;
+    }
+
+    .partner-logo-section-5 {
+        height: 100px; /* Adjust height for uniformity */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .partner-logo-5 {
+        max-width: 100px; /* Adjust logo size */
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .platform-card {
-        width: 100%; /* One card per row on small screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .section-5 p {
-        font-size: 0.9rem; /* Slightly reduce font size on smaller screens */
-        padding: 0 1rem; /* Add padding for better spacing */
-    }
-}
 
 /************************************************Index Section-6 ******************************************/
 
@@ -1034,6 +1241,48 @@ input[type="checkbox"] {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+    /* Center Section Title */
+    .section-left {
+        text-align: center;
+        margin: 0 auto; /* Center the container horizontally */
+        padding-bottom: 1rem;
+    }
+
+    .section-left h2 {
+        font-size: 1.5rem; /* Adjust the font size for mobile */
+        line-height: 1.4; /* Improve spacing between lines */
+        text-align: center; /* Center the heading */
+        margin: 0 auto;
+    }
+
+    /* Center Brand Cards */
+    .custom-brands-grid {
+        display: flex; /* Switch to flexbox for better control */
+        flex-wrap: wrap; /* Allow cards to stack */
+        justify-content: center; /* Center cards horizontally */
+        gap: 1.5rem; /* Adjust spacing between cards */
+        padding: 20px; /* Add padding for better spacing */
+        margin: 0 auto; /* Center the container */
+    }
+
+    .custom-brand-card {
+        width: calc(100% - 40px); /* Full width with padding */
+        max-width: 300px; /* Set a max width for the cards */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 0 auto; /* Center cards horizontally */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center card content vertically */
+        align-items: center;
+    }
+
+    .custom-brand-card img {
+        max-width: 80%; /* Adjust logo size */
+        height: auto;
+    }
+}
+
 /************************************************Section-7**************************************************/
 .section-7 {
     background-image: url('/images/backgrounds/1.png'); /* Update with your actual image path */
@@ -1058,7 +1307,6 @@ input[type="checkbox"] {
     margin-bottom: -20px;
     font-family: 'outfit', sans-serif;
     color: var(--color-text);
-    
   }
   
   .section-7-subtitle {
@@ -1075,8 +1323,8 @@ input[type="checkbox"] {
     justify-content: center;
     height: 150px;
 }
-  
-  .section-7-button {
+
+.section-7-button {
     font-family: 'outfit', sans-serif;
     background-color: #004b93; /* Button background color */
     color: #ffffff; /* Button text color */
@@ -1085,13 +1333,21 @@ input[type="checkbox"] {
     border-radius: 15px; /* Rounded corners for the button */
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
-  
-  .section-7-button:hover {
+}
+
+.section-7-button:hover {
     background-color: var(--color-text); /* Darker shade on hover */
-  }
+}
 
+@media (max-width: 768px) {
+    .section-7-subtitle {
+        display: none; /* Hide the description text */
+    }
 
+    .section-7-container h2 {
+        font-size: 1.8rem;
+    }
+}
 /*********************************************************** for Brands Page *****************************************************/
 /****************************************************** Section-1 Styling for Brands **************************************************/
 
@@ -1896,6 +2152,8 @@ input[type="checkbox"] {
     display: inline-block;
 }
 
+
+
 /*********************************************Logo and Social Media Container **********************************/
 
 .footer-logo-social {
@@ -1944,110 +2202,11 @@ input[type="checkbox"] {
     display: block;
 }
 
-/* Update this section to ensure vertical alignment in desktop view */
-@media (min-width: 769px) {
-    .footer-column {
-        flex-grow: 1;
-        text-align: left;
-    }
-
-    .footer-column .footer-title .toggle-icon {
-        display: none; /* Hide the + icon on desktop view */
-    }
-
-    .footer-column ul {
-        list-style: none;
-        padding-left: 0;
-        display: block; /* Ensure vertical layout */
-        font-size: 0.5rem; /* Set font size for the list item itself */
-    }
-
-    .footer-column ul li {
-        margin-bottom: 0.5rem;
-        display: block; /* Align the list items vertically */
-    }
-
-    .footer-column ul li a {
-        display: block; /* Ensure vertical alignment */
-        text-decoration: none;
-        font-size: 1rem; /* Consistent font size */
-        color: var(--color-description);
-    }
-
-    .footer-column ul li a:hover {
-        color: var(--hover-text); /* Add hover effect */
-        text-decoration: underline; /* Add underline effect */
-    }
-
-    .footer .container {
-        display: flex;
-        justify-content: space-between; /* Spread out the columns */
-        align-items: flex-start; /* Align items at the top */
-    }
-}
-
 /* Keep the mobile styles intact */
 @media (max-width: 768px) {
     /* Existing mobile styles */
-    .footer .container {
-
-        flex-direction: column;
-        align-items: center;
-    }
-
     .footer-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-column h4 {
-        font-size: 1.5rem; /* Reduce heading font size for mobile */
-    }
-
-    .footer-links {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: block; /* Ensure vertical layout */
-    }
-
-    .footer-links li {
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-column ul li a {
-        font-size: 1rem; /* Reduce link font size for mobile */
-    }
-
-    .footer-column ul {
-        display: none; /* Hide links initially */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    .footer-links.hidden {
-        max-height: 0;
-    }
-
-    .footer-links:not(.hidden) {
-        display: block;
-        max-height: 500px;
-    }
-
-    .footer-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 1rem;
-        padding: 0.5rem;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .toggle-icon {
-        font-size: 1.5rem;
-        transition: transform 0.3s ease;
+        display: none; /* Hide the + icon on desktop view */
     }
 }
 
