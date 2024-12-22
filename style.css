@@ -144,168 +144,40 @@ header {
     background-color: #004080; /* Darker blue on hover */
 }
 
-/* Responsive adjustments for Header */
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Top Header Section */
-    .container-header {
-        flex-wrap: wrap; /* Stack items vertically */
-        text-align: center; /* Center-align text on smaller screens */
-    }
-
+    /* Logo Section */
     .logo-container-header {
-        margin-bottom: 15px; /* Add spacing between logo and other sections */
-        padding-left: 0;
+        text-align: center;
+        margin: 0; /* Center horizontally */
+        padding: 0;
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center horizontally */
+        align-items: center;  Center vertically */
+        height: 100px; /* Full height for vertical centering */
     }
 
-    .info-container-header {
-        flex-wrap: wrap; /* Stack info items vertically */
-        gap: 15px; /* Reduce space between items */
-        justify-content: center; /* Center items horizontally */
-    }
-
-    .social-media-container-header {
-        margin-top: 15px; /* Add spacing between social media and info section */
-    }
-
-    /* Bottom Navigation Bar */
-    .nav-links-header {
-        flex-wrap: wrap; /* Stack navigation items */
-        gap: 15px; /* Reduce gap between links */
-        justify-content: center; /* Center the navigation links */
-    }
-
-    .nav-links-header a {
-        font-size: 1rem; /* Adjust font size for better fit */
-    }
-}
-
-@media (max-width: 480px) {
     .logo-container-header img {
-        max-height: 80px; /* Resize logo for very small screens */
+        max-height: 100px; /* Resize logo for smaller screens */
+        margin: 0;
     }
 
+    /* Hide Info Section */
     .info-container-header {
-        font-size: 1rem; /* Reduce font size for info text */
-        gap: 10px; /* Minimize spacing further */
+        display: none; /* Hide the info section */
     }
 
-    .nav-links-header a {
-        font-size: 0.9rem; /* Smaller font size for links */
-    }
-}
-/* Responsive adjustments for Header */
-@media (max-width: 768px) {
-    /* Top Header Section */
-    .container-header {
-        flex-wrap: wrap; /* Stack items vertically */
-        text-align: center; /* Center-align text on smaller screens */
+    /* Hide Navigation Menu */
+    .nav-container-header {
+        display: none; /* Hide the navigation menu */
     }
 
-    .logo-container-header {
-        margin-bottom: 15px; /* Add spacing between logo and other sections */
-        padding-left: 0;
-    }
-
-    .info-container-header {
-        flex-wrap: wrap; /* Stack info items vertically */
-        gap: 15px; /* Reduce space between items */
-        justify-content: center; /* Center items horizontally */
-    }
-
+    /* Hide Social Media Section */
     .social-media-container-header {
-        margin-top: 15px; /* Add spacing between social media and info section */
-    }
-
-    /* Bottom Navigation Bar */
-    .nav-links-header {
-        flex-wrap: wrap; /* Stack navigation items */
-        gap: 15px; /* Reduce gap between links */
-        justify-content: center; /* Center the navigation links */
-    }
-
-    .nav-links-header a {
-        font-size: 1rem; /* Adjust font size for better fit */
+        display: none; /* Hide the social media icons */
     }
 }
-
-@media (max-width: 480px) {
-    .logo-container-header img {
-        max-height: 80px; /* Resize logo for very small screens */
-    }
-
-    .info-container-header {
-        font-size: 1rem; /* Reduce font size for info text */
-        gap: 10px; /* Minimize spacing further */
-    }
-
-    .nav-links-header a {
-        font-size: 0.9rem; /* Smaller font size for links */
-    }
-}
-
-/**************************************************Hamburger Menu**************************************************/
-
-/* Hamburger Icon Styling */
-.hamburger {
-    display: none; /* Hidden on desktop */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-  
-  .hamburger span {
-    width: 30px;
-    height: 3px;
-    background-color: var(--color-text);
-    transition: all 0.3s ease;
-  }
-  
-  /* Show hamburger on smaller screens */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex; /* Flexbox to display vertically stacked bars */
-    }
-  
-    /* Hide navigation links initially on mobile */
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 60px; /* Adjust based on header height */
-      right: 0;
-      background-color: var(--header-footer-color);
-      width: 100%;
-      height: 100vh;
-      text-align: center;
-      z-index: 1;
-    }
-  
-    .nav-links ul {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-  
-    /* Display navigation links when the hamburger is clicked */
-    .nav-links.active {
-      display: flex;
-    }
-  }
-  
-  /* Animation to turn the hamburger into a close "X" */
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-
 
 /******************************************************* Call to Action Line & Link ********************************************/
 /* Main container styling */

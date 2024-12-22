@@ -1,19 +1,4 @@
 /*****************************************************
- * Module 1: Navigation Menu
- *****************************************************/
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Assuming this is the function for your navigation menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-});
-
-/*****************************************************
  * Module 2: Dynamic Header and Footer Includes
  *****************************************************/
 
@@ -69,3 +54,6 @@ window.addEventListener('click', (event) => {
         popupForm.style.display = 'none'; // Hide the pop-up
     }
 });
+
+
+
