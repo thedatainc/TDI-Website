@@ -2028,63 +2028,107 @@ input[type="checkbox"] {
 }
 
 /****************************************************************** Footer Styling ************************************************************/
-
 .footer {
-    background-color: #fff; /***** Footer Background ******/
-    padding: 20px;
+    background-color: #fff; /* Footer background color */
+    padding: 30px 20px; /* Add padding for spacing */
     color: #1f7bd2;
-    text-align: center;
-    }
-
-.footer .container {
-    display: flex;
-    justify-content: center; /* Centers the Columns */
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 1px;
-    }
-
-/* Specific Styling for Footer Headings */
-.footer-title {
-    font-family: 'outfit', sans-serif; /* Font family for headings */
-    font-size: 1.2rem; /* Font size for headings */
-    font-weight: 500; /* Make headings bold */
-    color: var(--color-text); /* Text color */
-    text-align: center; /* Align heading text to the left */
-    margin-bottom: 1.2rem; /* Space below the heading */
     text-align: center;
 }
 
+.footer .container {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute columns */
+    align-items: flex-start; /* Align items at the top */
+    max-width: 1200px; /* Wider content area */
+    margin: 0 auto; /* Center container */
+    gap: 2rem; /* Add spacing between columns */
+}
+
+/* Footer Columns */
 .footer-column {
-    flex-grow: 0; /* Allow columns to grow as needed */
-    flex-basis: calc(0% - 10px); /* Adjust based on the number of columns */
-    text-align: center;
-    padding: 0.5rem; /* Minimal padding inside each column */
-    margin:0;
+    flex: 1; /* All columns take equal width */
+    text-align: left; /* Align text to the left for better balance */
+}
+
+.footer-title {
+    font-family: 'Outfit', sans-serif; /* Font family for headings */
+    font-size: 1.4rem; /* Slightly larger font size for titles */
+    font-weight: bold; /* Make titles bold */
+    color: #005bc1; /* Blue color for titles */
+    text-align: left; /* Align titles to the left for consistency */
+    margin-bottom: 1rem; /* Space below the title */
+    text-transform: uppercase; /* Optional: make titles uppercase */
+    letter-spacing: 0.05rem; /* Optional: Add slight letter spacing */
 }
 
 .footer-column ul {
     list-style: none;
-    padding-left: 0;
-    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-column ul li {
-    margin-bottom: 0.3rem;
-    font-size: 0.5rem; /* Set font size for the list item itself */
+    margin-bottom: 0.5rem; /* Add consistent spacing */
 }
 
 .footer-column ul li a {
-    font-family: 'outfit', sans-serif; /* Font family for headings */
+    font-family: 'Outfit', sans-serif;
     text-decoration: none;
-    color: var(--color-text);
-    font-size: 1.2rem !important;
+    color: var(--color-description);
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
     color: var(--hover-color); /* Change color on hover */
+}
+
+/* Footer Logo and Social Icons */
+.footer-logo-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center logo and social icons */
+    justify-content: flex-start;
+}
+
+.logo-img {
+    max-width: 120px; /* Adjust logo size */
+    margin-bottom: 1rem;
+}
+
+.footer-social ul {
+    display: flex; /* Align icons horizontally */
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-social ul li a img {
+    width: 30px; /* Adjust icon size */
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Footer Bottom Section */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ccc; /* Light gray separator */
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    text-align: center; /* Center-align text */
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
 
 /************************************************************ Footer Line *******************************************************/
@@ -2101,20 +2145,6 @@ input[type="checkbox"] {
     padding-bottom: 0; /* Removes extra padding and fixed the issue */
     font-weight: bold; /* Makes the text bold */
 }
-
-.footer-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    /*justify-content: center; /* Ensure the links are centered */
-}
-
-.footer-links li {
-    display: inline-block; /* Ensure they stay inline */
-}
-
 
 .footer-links a {
     text-decoration: none;
@@ -2147,7 +2177,6 @@ input[type="checkbox"] {
     margin: 0 20px;
     display: inline-block;
 }
-
 
 
 /*********************************************Logo and Social Media Container **********************************/
@@ -2204,7 +2233,67 @@ input[type="checkbox"] {
     .footer-column {
         display: none; /* Hide the + icon on desktop view */
     }
-}
 
+    .footer .container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        font-size: 1.5rem; /* Reduce heading font size for mobile */
+    }
+
+    .footer-links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: block; /* Ensure vertical layout */
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+        font-size: 1rem; /* Reduce link font size for mobile */
+    }
+
+    .footer-column ul {
+        display: none; /* Hide links initially */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .footer-links.hidden {
+        max-height: 0;
+    }
+
+    .footer-links:not(.hidden) {
+        display: block;
+        max-height: 500px;
+    }
+
+    .footer-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .toggle-icon {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+}
 
 
