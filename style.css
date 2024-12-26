@@ -1,3 +1,4 @@
+/* #region Global-Styling */
 :root {
     --color-text: #005bc1;
     --color-description: #555;
@@ -27,7 +28,9 @@ h1, h2, h3, h4, h5, h6,p {
     font-family: 'Outfit', sans-serif;
 }
 
-/******************************************** Header Styling **************************/
+/* #endregion */
+
+/* #region Header Styling **************************/
 header {
     width: 100%;
     font-family: 'outfit', sans-serif;
@@ -57,7 +60,7 @@ header {
 }
 
 .logo-container-header img {
-    max-height: 130px; /* Adjust logo size */   
+    max-height: 160px; /* Adjust logo size */   
 }
 
 /* Info Section */
@@ -66,6 +69,7 @@ header {
     align-items: center;
     gap: 30px; /* Space between each info item */
     flex: 3;
+    font-family: 'outfit', sans-serif;
 }
 
 .info-item-header {
@@ -104,20 +108,16 @@ header {
     transform: scale(1.1);
 }
 
-/* Bottom Navigation Bar */
-.header-bottom {
-    background-color: #0056b3; /* Blue background for the bottom navigation bar */
-    padding: 10px 0;
-}
 
 .nav-container-header {
-    max-width: 1200px;
+    max-width: 2200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    background-color: #0056b3;
+    padding: 10px 0;    
 }
 
 /* Navigation Links */
@@ -128,12 +128,13 @@ header {
 
 .nav-links-header li {
     list-style: none;
+    font-family: 'outfit', sans-serif;
 }
 
 .nav-links-header a {
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 3px;
@@ -178,7 +179,10 @@ header {
     }
 }
 
-/******************************************************* Call to Action Line & Link ********************************************/
+/* #endregion */
+
+/* #region Call to Action Line & Link **************/
+
 /* Main container styling */
 .call-to-action {
     text-align: center; /* Center-align the text */
@@ -207,7 +211,9 @@ header {
     }
 }
 
-/**************************************************** Left and Right Sections ************************************/
+/* #endregion */
+
+/* #region Left and Right Sections *****************/
 
   /* Left Section: Heading */
 .section-left {
@@ -265,7 +271,9 @@ header {
     }
 }
 
-/***********************************************Call Button/ Learn More Button******************************************************/
+/* #endregion */
+
+/* #region Call Button/ Learn More Button **********/
 .btn {
     background-color:  #005bc1;;
     color: #fff;
@@ -291,7 +299,9 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/****************************************Action Links*************************************************************/
+/* #endregion */
+
+/* #region Action Links ****************************/
 
 /* Discover Button - Default State */
 .action-link {
@@ -320,10 +330,10 @@ header {
     border-radius: 30px; /* Optional: Adjust rounded corners */
 }
 
+/* #endregion */
 
-/**************************************************************************************************************************************************************/
-/********************************************************************* Pop-up Form Container ******************************************************************/
-/**************************************************************************************************************************************************************/
+/* #region Pop-up Form Container *******************/
+
 .popup-form-container {
     display: none; /* Initially hidden */
     position: fixed;
@@ -396,7 +406,6 @@ input[type="checkbox"] {
     
 }
 
-
 /* Submit Button */
 .submit-btn {
     background-color: #005792;
@@ -415,8 +424,10 @@ input[type="checkbox"] {
     background-color: #003d5c;
 }
 
-/*****************************************************************************************************************/
-/*********************************************** Index Section-1 Styling *****************************************/
+/* #endregion */
+
+/* #region Index Section-1 Styling *****************/
+
 /* Startup Section Styling */
 .startup-section {
     display: flex;
@@ -539,8 +550,10 @@ input[type="checkbox"] {
 
 }
 
+/* #endregion */
 
-/******************************************************** Index Section-2 Styling *******************************************************/
+
+/* #region Index Section-2 Styling *****************/
 
 /* Section Styling */
 .services-section-2 {
@@ -676,7 +689,9 @@ input[type="checkbox"] {
 
 }
 
-/*************************************************************Index Section-3*********************************************************************/
+/* #endregion */
+
+/* #region Index Section-3 *************************/
 
 .section-3 {
     padding: 60px 20px;
@@ -793,11 +808,9 @@ input[type="checkbox"] {
 
 }
 
-/*****************************************************************************************/
-/*****************************************************************************************/
-/*************************************** Video *******************************************/
-/*****************************************************************************************/
-/*****************************************************************************************/
+/* #endregion */
+
+/* #region Video ***********************************/
 
 .video-section {
     position: relative;
@@ -929,7 +942,10 @@ input[type="checkbox"] {
     }
 }
 
-/*******************************************Index Section-4************************************/
+/* #endregion */
+
+/* #region Index Section-4 *************************/
+
 .section-4 {
     padding: 4rem 0;
 }
@@ -1065,8 +1081,9 @@ input[type="checkbox"] {
     }
 }
 
+/* #endregion */
 
-/******************************************** Index Section-5 *******************************************/
+/* #region Index Section-5 *************************/
 .section-5 {
     padding: 4rem 0;
 }
@@ -1191,8 +1208,9 @@ input[type="checkbox"] {
     }
 }
 
+/* #endregion */
 
-/************************************************Index Section-6 ******************************************/
+/* #region Index Section-6 *************************/
 
 .section-6-layout {
     max-width: 1200px;
@@ -1279,7 +1297,9 @@ input[type="checkbox"] {
     }
 }
 
-/************************************************Section-7**************************************************/
+/* #endregion */
+
+/* #region Index Section-7 *************************/
 .section-7 {
     background-image: url('/images/backgrounds/1.png'); /* Update with your actual image path */
     background-size: cover;
@@ -1344,8 +1364,15 @@ input[type="checkbox"] {
         font-size: 1.8rem;
     }
 }
+
+/* #endregion */
+
 /*********************************************************** for Brands Page *****************************************************/
-/****************************************************** Section-1 Styling for Brands **************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+
+/* #region Section-1 Styling for Brands ************/
 
 /* Section 1: General Styling */
 .section-1-brands {
@@ -1389,7 +1416,6 @@ input[type="checkbox"] {
     display: inline-block;
 }
 
-
 .subheading-brands {
     font-family: 'Outfit', sans-serif;
     color: var(--color-description);
@@ -1432,7 +1458,6 @@ input[type="checkbox"] {
     font-weight: 500;
     display: inline-block;
     margin-bottom: 1rem;
-   
 }
 
 .banner-content-brands h3 {
@@ -1441,8 +1466,7 @@ input[type="checkbox"] {
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 1rem;
- }
-
+}
 
 .right-banner-container-brands {
     background-color: #F6F1ED; /* Light beige background */
@@ -1463,9 +1487,9 @@ input[type="checkbox"] {
 .right-banner-container-brands:hover {
     transform: perspective(100px) rotateX(0deg) rotateY(0deg); /* On hover, straighten the container for emphasis */
 }
+/* #endregion */
 
-
-/*********************************************** Page: Brands - Services for Brands *****************************************/
+/* #region Brands - Section-3 **********************/
 
 .brands-section-3 {
     background-color: #f9f9f9; /* Light grey background for the section */
@@ -1553,7 +1577,14 @@ input[type="checkbox"] {
     }
 }
 
-/*********************************************** Section-1 Styling for Retailers *****************************************/
+/* #endregion */
+
+/*********************************************************** for Retailers Page *****************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+/*********************************************************************************************************************************/
+
+/* #region Section-1 Styling for Retailers *********/
 
 .section-1-retailers {
     display: flex;
@@ -1649,7 +1680,9 @@ input[type="checkbox"] {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/*************************************************************** Retailers Section-3 *************************************************/
+/* #endregion */
+
+/* #region Retailers Section-3 *********************/
 
 .retailers-section-3 {
     background-color: #f9f9f9; /* Light grey background for the section */
@@ -1728,11 +1761,13 @@ input[type="checkbox"] {
     line-height: 1.6; /* Improved line height for readability */
 }
 
+/* #endregion */
 
 /***********************************Contact Us***************************************/
 /************************************************************************************/
+/************************************************************************************/
 
-/* Contact Section-1 Banner Styling */
+/* #region Contact Section-1 Banner Styling ********/
 .contact-sec-1 {
     width: 100%;
     position: relative;
@@ -1791,7 +1826,9 @@ input[type="checkbox"] {
     }
 }
 
-/* Section-2 Styling */
+/* #endregion */
+
+/* #region Section-2 Styling ***********************/
 .contact-sec-2 {
     padding: 50px 20px;
     background-color: #fff; /* White background for the section */
@@ -1902,9 +1939,12 @@ input[type="checkbox"] {
     }
 }
 
+/* #endregion */
 
 /***********************************Call Schedule***************************************/
 /************************************************************************************/
+/* #region Call Schedule ***************************/
+
 .schedule-meeting-container {
     max-width: 1100px;
     margin: 2rem auto;
@@ -1934,8 +1974,13 @@ input[type="checkbox"] {
     max-width: 100%;
 }
 
+/* #endregion */
+
+
 /***********************************Privacy Policy***************************************/
-/************************************************************************************/
+/***************************************************************************************/
+/* #region Privacy Policy *************************/
+
 .privacy-policy-container {
     max-width: 1200px; /* Increase container width */
     margin: 3rem auto; /* Adjust top and bottom margin */
@@ -1975,9 +2020,15 @@ input[type="checkbox"] {
     text-decoration: underline;
 }
 
+/* #endregion */
+
+
 /***************************** Terms of Service **********************/
 /*********************************************************************/
 /*********************************************************************/
+
+/* #region Terms of Service **********************/
+
 .terms-page-container {
     max-width: 1200px; /* Larger container for better readability */
     margin: 3rem auto;
@@ -2016,8 +2067,6 @@ input[type="checkbox"] {
     text-align: justify;
 }
 
-
-
 .condition-item {
     font-family: 'Outfit', sans-serif;
     color: var(--color-description);
@@ -2027,7 +2076,13 @@ input[type="checkbox"] {
     font-weight: normal;
 }
 
-/****************************************************************** Footer Styling ************************************************************/
+/* #endregion */
+
+/************************************************** Footer Styling ************************/
+/***********************************************************************************/
+/**************************************************************************************/
+
+/* #region Footer General Syling ***************/
 .footer {
     background-color: #fff; /* Footer background color */
     padding: 30px 20px; /* Add padding for spacing */
@@ -2052,12 +2107,12 @@ input[type="checkbox"] {
 
 .footer-title {
     font-family: 'Outfit', sans-serif; /* Font family for headings */
-    font-size: 1.4rem; /* Slightly larger font size for titles */
+    font-size: 1.5rem; /* Slightly larger font size for titles */
     font-weight: bold; /* Make titles bold */
     color: #005bc1; /* Blue color for titles */
     text-align: left; /* Align titles to the left for consistency */
     margin-bottom: 1rem; /* Space below the title */
-    text-transform: uppercase; /* Optional: make titles uppercase */
+    
     letter-spacing: 0.05rem; /* Optional: Add slight letter spacing */
 }
 
@@ -2080,7 +2135,7 @@ input[type="checkbox"] {
 }
 
 .footer-column ul li a:hover {
-    color: var(--hover-color); /* Change color on hover */
+    color: var(--nav-link-color); /* Change color on hover */
 }
 
 /* Footer Logo and Social Icons */
@@ -2131,7 +2186,9 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-/************************************************************ Footer Line *******************************************************/
+/* #endregion */
+
+/* #region Footer Line *************************/
 
 .footer-line {
     border: none;
@@ -2178,8 +2235,9 @@ input[type="checkbox"] {
     display: inline-block;
 }
 
+/* #endregion */
 
-/*********************************************Logo and Social Media Container **********************************/
+/* #region Logo and Social Media Container *****/
 
 .footer-logo-social {
     flex-basis: 20%; /* Adjust this width as needed */
@@ -2295,5 +2353,5 @@ input[type="checkbox"] {
         transition: transform 0.3s ease;
     }
 }
-
+/* #endregion */
 
