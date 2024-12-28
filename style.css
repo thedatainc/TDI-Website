@@ -983,10 +983,10 @@ input[type="checkbox"] {
 .partner-card-4 {
     width: calc(33.333% - 1rem); /* Three cards per row with gap */
     background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 140px;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
     width: 250px; /* Control the width of each card */
-    flex-grow:1;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1044,7 +1044,7 @@ input[type="checkbox"] {
     .section-left {
         text-align: center; /* Center-align the text */
         margin: 0 auto; /* Center the container horizontally */
-        padding-bottom: 1rem; /* Add spacing below the title */
+        padding-bottom: 0rem; /* Add spacing below the title */
     }
 
     .section-left h2 {
@@ -1052,6 +1052,8 @@ input[type="checkbox"] {
         line-height: 1.4; /* Improve spacing between lines */
         text-align: center; /* Center the heading */
         margin: 0 auto; /* Center the heading */
+        padding-bottom: 0.5rem; /* Add spacing below the title */
+        
     }
 
     /* Center the Partner Cards */
@@ -1065,11 +1067,28 @@ input[type="checkbox"] {
     }
 
     .partner-card-4 {
-        width: calc(100% - 40px); /* Full width with padding */
-        max-width: 300px; /* Set a max width for the cards */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 0 auto; /* Center cards horizontally */
+        width: calc(100% - 30px); /* Full width with some padding */
+        max-width: 280px; /* Maximum width for cards */
+        height: auto; /* Adjust height dynamically */
+        margin: 0 auto; /* Center horizontally */
+        border-radius: 25px; /* Increase this value for rounder corners */
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px; /* Adjust padding inside cards */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+        overflow: hidden;
+        
     }
+
+    .partner-card-4:hover {
+        transform: translateY(-5px); /* Lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
 
     .partner-logo-section-4 {
         height: 100px; /* Adjust height for uniformity */
@@ -1185,14 +1204,21 @@ input[type="checkbox"] {
     }
 
     .platform-card {
-        width: calc(100% - 40px); /* Full width with padding */
-        max-width: 300px; /* Set a max width for the cards */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 0 auto; /* Center cards horizontally */
+        width: calc(100% - 30px); /* Full width with some padding */
+        max-width: 280px; /* Maximum width for cards */
+        height: auto; /* Adjust height dynamically */
+        margin: 0 auto; /* Center horizontally */
+        border-radius: 25px; /* Increase this value for rounder corners */
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center card content vertically */
+        justify-content: center;
         align-items: center;
+        padding: 0px; /* Adjust padding inside cards */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+        overflow: hidden;
+        
     }
 
     .partner-logo-section-5 {
@@ -1260,7 +1286,7 @@ input[type="checkbox"] {
     .section-left {
         text-align: center;
         margin: 0 auto; /* Center the container horizontally */
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
     }
 
     .section-left h2 {
@@ -1487,6 +1513,39 @@ input[type="checkbox"] {
 .right-banner-container-brands:hover {
     transform: perspective(100px) rotateX(0deg) rotateY(0deg); /* On hover, straighten the container for emphasis */
 }
+
+@media (max-width: 768px) {
+    /* Hide the right container and any unnecessary elements */
+    .right-banner-container-brands,
+    .banner-content-brands, .subheading-brands {
+        display: none;
+    }
+
+    /* Adjust the layout of the left container */
+    .section-1-container-brands {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center the content horizontally */
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Center the main heading */
+    .main-heading-brands {
+        font-size: 2rem; /* Adjust size for mobile */
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+
+    /* Adjust the button */
+    .btn.learn-more-btn {
+        margin-top: 1.5rem;
+        font-size: 1rem; /* Adjust font size */
+        padding: 0.8rem 2rem; /* Adjust padding */
+        text-align: center;
+    }
+}
+
 /* #endregion */
 
 /* #region Brands - Section-3 **********************/
@@ -1569,13 +1628,61 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 768px) {
-    .brand-section-4-service-card {
-        width: 100%; /* Full width cards on smaller screens */
-        margin: 1rem 0; /* Adjust spacing for mobile layout */
-        padding: 1.5rem; /* Slightly reduced padding on smaller devices */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow for subtle effect */
+
+    .brands-section-3-section-title {
+        font-size: 1.5rem; /* Adjust size for mobile */
+        margin-bottom: 1rem;
+        text-align: center;
+
+    }
+    .brands-section-3-service-cards-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center align the cards horizontally */
+        justify-content: center; /* Center align the cards vertically if needed */
+        grid-template-columns: none; /* Remove the grid-template-columns */
+        gap: 20px; /* Add some space between the cards */
+    }
+
+    .brand-service-card {
+        width: 90%;
+        max-width: 300px;
+    }
+    .brand-service-card img {
+        width: 50px; /* Reduce size for mobile */
+        height: 50px; /* Match width */
+        margin-bottom: 15px; /* Add some space below the image */
+    }
+
+    .brand-service-card h3 {
+        font-size: 1.2rem; /* Reduce font size */
+        margin-bottom: 10px; /* Add space below the title */
+
+    }
+
+    .brand-service-card p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin-bottom: 15px; /* Add space below the description */
+        padding: 0 10px; /* Add some padding for better spacing */
+        text-align: center; /* Ensure text stays centered */
+    }
+
+    .card-section-3 .action-link {
+        font-size: 1.2rem; /* Reduce button font size */
+        padding: 0px 0px; /* Adjust button padding */
+        margin-top: 20px; /* Add space above the button */
+        display: inline-block; /* Ensure proper spacing */
+}
+
+@media (max-width: 480px) {
+    .cards-container-section-3 {
+        grid-template-columns: 1fr; /* 1 card per row on very small screens */
     }
 }
+
+}
+
 
 /* #endregion */
 
