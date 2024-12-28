@@ -361,7 +361,9 @@ header {
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    width: 100%;
+    box-sizing: border-box !important;
+    width: auto !important;
+    height: auto !important;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -422,6 +424,56 @@ input[type="checkbox"] {
 
 .submit-btn:hover {
     background-color: #003d5c;
+}
+
+@media (max-width: 768px) {
+    /* Pop-up Form Container */
+    .popup-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; /* Add padding to avoid touching screen edges */
+    }
+
+    /* Pop-up Form */
+    .popup-form {
+        max-width: 90%; /* Adjust the form width for smaller screens */
+        width: 90%; /* Ensure it fits within the viewport */
+        padding: 15px; /* Adjust padding for mobile */
+        border-radius: 10px;
+        overflow-y: auto; /* Enable scrolling if content overflows */
+        max-height: 90%; /* Restrict height to fit within the viewport */
+        position: relative; /* Maintain position context for child elements */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Form Row */
+    .form-row {
+        flex-direction: column; /* Stack fields vertically on smaller screens */
+        gap: 10px; /* Add spacing between fields */
+    }
+
+    /* Input Fields */
+    input[type="text"], input[type="email"], input[type="tel"] {
+        width: 100%; /* Full width for inputs */
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Submit Button */
+    .submit-btn {
+        padding: 10px; /* Reduce button padding */
+        font-size: 1rem; /* Adjust font size */
+        width: 100%; /* Full width button */
+        margin-top: 10px; /* Add spacing above the button */
+    }
+
+    /* Close Button */
+    .close-btn {
+        font-size: 1.5rem; /* Slightly smaller close button */
+        top: 10px;
+        right: 10px;
+    }
 }
 
 /* #endregion */
@@ -551,7 +603,6 @@ input[type="checkbox"] {
 }
 
 /* #endregion */
-
 
 /* #region Index Section-2 Styling *****************/
 
@@ -1282,43 +1333,52 @@ input[type="checkbox"] {
 }
 
 @media (max-width: 768px) {
-    /* Center Section Title */
+    /* Center the Section Title */
     .section-left {
         text-align: center;
-        margin: 0 auto; /* Center the container horizontally */
-        padding-bottom: 3rem;
+        margin: 0 auto;
+        padding-bottom: 0.5rem; /* Reduce the bottom padding */
     }
 
     .section-left h2 {
-        font-size: 1.5rem; /* Adjust the font size for mobile */
-        line-height: 1.4; /* Improve spacing between lines */
-        text-align: center; /* Center the heading */
+        font-size: 1.5rem;
+        line-height: 1.4;
+        text-align: center;
         margin: 0 auto;
+        padding-bottom: 0.5rem; /* Adjust spacing below the title */
     }
 
-    /* Center Brand Cards */
+    /* Center the Cards */
     .custom-brands-grid {
-        display: flex; /* Switch to flexbox for better control */
+        display: flex;
         flex-wrap: wrap; /* Allow cards to stack */
         justify-content: center; /* Center cards horizontally */
         gap: 1.5rem; /* Adjust spacing between cards */
-        padding: 20px; /* Add padding for better spacing */
+        padding: 20px; /* Padding around the cards */
         margin: 0 auto; /* Center the container */
     }
 
     .custom-brand-card {
-        width: calc(100% - 40px); /* Full width with padding */
-        max-width: 300px; /* Set a max width for the cards */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 0 auto; /* Center cards horizontally */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center card content vertically */
-        align-items: center;
+        box-sizing: border-box;
+        width: calc(100% - 30px); /* Full width with some padding */
+        max-width: 280px; /* Match card width to the second screenshot */
+        height: auto;
+        background-color: #fff; /* White background for consistency */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        border-radius: 25px; /* Rounder corners */
+        text-align: center;
+        padding: 1.5rem; /* Padding inside the card */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+        overflow: hidden; /* Prevent content overflow */
+    }
+
+    .custom-brand-card:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     }
 
     .custom-brand-card img {
-        max-width: 80%; /* Adjust logo size */
+        max-width: 80%; /* Logo size inside the card */
         height: auto;
     }
 }
@@ -1787,6 +1847,32 @@ input[type="checkbox"] {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+    /* Hide everything inside the section except the <h1> */
+    .section-1-retailers .left-container-retailers > *:not(h1),
+    .section-1-retailers .right-banner-container-retailers {
+        display: none !important; /* Completely hides these elements */
+    }
+
+    /* Center the <h1> on mobile */
+    .section-1-retailers h1 {
+        text-align: center;
+        font-size: 1.5rem; /* Adjust font size for better readability on smaller screens */
+        margin: 0 auto;
+    }
+
+    /* Ensure the section itself is centered */
+    .section-1-retailers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem; /* Adjust padding for mobile */
+    }
+
+    
+}
+
+
 /* #endregion */
 
 /* #region Retailers Section-3 *********************/
@@ -1866,6 +1952,47 @@ input[type="checkbox"] {
     color: #666; /* Grey color maintained from previous sections */
     font-size: 1.3rem; /* Larger text size for better readability */
     line-height: 1.6; /* Improved line height for readability */
+}
+
+@media (max-width: 768px) {
+    .retailers-section-3-section-title{
+        font-size: 1.5rem; 
+        margin-bottom: 1rem;
+        text-align: cneter;
+    }
+
+    .retailers-section-3-service-cards-container{
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack the cards vertically */
+        align-items: center; /* Center align the cards horizontally */
+        justify-content: center; /* Center align the cards vertically if needed */
+        grid-template-columns: none; /* Remove the grid-template-columns */
+        gap: 20px; /* Add some space between the cards */
+    }
+
+    .service-card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .service-card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin-bottom: 15px; /* Add space below the description */
+        padding: 0 10px; /* Add some padding for better spacing */
+        text-align: center; /* Ensure text */
+    }
 }
 
 /* #endregion */
