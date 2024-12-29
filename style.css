@@ -432,30 +432,43 @@ input[type="checkbox"] {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px; /* Add padding to avoid touching screen edges */
+        padding: 0px; /* Add padding to avoid touching screen edges */
     }
 
     /* Pop-up Form */
     .popup-form {
         max-width: 90%; /* Adjust the form width for smaller screens */
-        width: 90%; /* Ensure it fits within the viewport */
+        width: 100%; /* Ensure it fits within the viewport */
         padding: 15px; /* Adjust padding for mobile */
-        border-radius: 10px;
+        border-radius: 15px;
         overflow-y: auto; /* Enable scrolling if content overflows */
         max-height: 90%; /* Restrict height to fit within the viewport */
         position: relative; /* Maintain position context for child elements */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        font-size: 0.9rem; /* Adjust font size */
     }
+
+/* Styling for Labels */
+    .popup-form label {
+        font-family: 'Outfit', sans-serif; /* Set your desired font family */
+        font-size: 1rem; /* Adjust font size */
+        font-weight: 600; /* Adjust font weight for boldness */
+        color: #333; /* Set text color */
+        margin-bottom: 0px; /* Add spacing below labels */
+        display: block; /* Ensure proper spacing for each label */
+    }
+
 
     /* Form Row */
     .form-row {
         flex-direction: column; /* Stack fields vertically on smaller screens */
-        gap: 10px; /* Add spacing between fields */
+        gap: 5px; /* Add spacing between fields */
+        
     }
 
     /* Input Fields */
     input[type="text"], input[type="email"], input[type="tel"] {
-        width: 100%; /* Full width for inputs */
+        width: 90%; /* Full width for inputs */
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: 1rem; /* Adjust font size */
     }
