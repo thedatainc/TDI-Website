@@ -946,7 +946,9 @@ input[type="checkbox"] {
     top: 92%; /* Move down */
     left: 30%; /* Move right */
     transform: translate(-50%, -50%); /* Center the button */
-    
+    color: transparent; /* Hides the text inside the button */
+    text-indent: -9999px; /* Ensures the text is not visually accessible */
+    overflow: hidden; /* Prevents text from showing */
 }
 
 /* White Triangle (Play Icon) */
@@ -981,8 +983,8 @@ input[type="checkbox"] {
     .video-content h4 {
         text-align: center;
         font-family: 'Outfit', sans-serif;
-        font-size: 2rem;
-        margin-bottom: 50px;
+        font-size: 1.8rem;
+        margin-bottom: 100px;
         color: var(--color-white);
     }
 
@@ -999,8 +1001,8 @@ input[type="checkbox"] {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
         transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
         position: absolute; /* Position relative to parent */
-        top: 43%; /* Move down */
-        left: 75%; /* Move right */
+        top: 80%; /* Move down */
+        left: 29%; /* Move right */
         transform: translate(-50%, -50%); /* Center the button */
         
     }
