@@ -1604,7 +1604,7 @@ input[type="checkbox"] {
 
     /* Center the main heading */
     .main-heading-brands {
-        font-size: 2rem; /* Adjust size for mobile */
+        font-size: 1.5rem; /* Adjust size for mobile */
         margin-bottom: 1rem;
         text-align: center;
     }
