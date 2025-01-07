@@ -3,29 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule a Meeting - The Data Inc.</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png?v=1">
 </head>
 <body>
-
-    <!-- Header Include -->
+    <!-- Header Section -->
     <div id="header"></div>
     <div data-include-html="header.html"></div>
 
-    <!-- Schedule a Meeting Section -->
-    <section class="schedule-meeting-container">
-        <h1 class="schedule-heading">Schedule a Meeting with Us</h1>
-        <p class="schedule-description"></p>
-        <div class="booking-iframe-container">
-            <a href='https://outlook.office365.com/owa/calendar/IntroductorymeetingwithTheDataInc1@thedatainc.com/bookings/'>Schedule online</a>
+    <!-- Section-1 Banner -->
+    <section class="contact-sec-1">
+        <div class="contact-sec-banner">
+        <img src="images/Contact-Us/1.png" alt="Banner Image" class="banner-image">
+            <div class="contact-banner-text">
+                
+            </div>
         </div>
     </section>
 
-    <!-- Footer Include -->
+ <!-- Section-2 -->
+<section class="contact-sec-2">
+    <div class="contact-sec-2-container">
+        <!-- Left Container -->
+        <div class="contact-sec-2-left">
+            <h2>Book a Meeting with Us</h2>
+            <p>Schedule a meeting with our team to discuss your requirements and how we can help you. Select a time that works best for you!</p>
+        </div>
+        <!-- Right Container -->
+        <div class="contact-sec-2-right">
+            <!-- Embed Microsoft Bookings -->
+            <iframe
+                src="https://outlook.office365.com/owa/calendar/YourBookingPage@YourDomain.com/bookings/"
+                width="100%"
+                height="600"
+                frameborder="0"
+                allowfullscreen
+                title="Book a Meeting">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
     <div id="footer"></div>
     <div data-include-html="footer.html"></div>
 
-    <script src="common.js"></script>
+    <script src="common.js"></script> <!-- Include script for dynamic header/footer -->
 </body>
 </html>
