@@ -275,7 +275,7 @@ header {
 
 /* #region Call Button/ Learn More Button **********/
 .btn {
-    background-color:  #005bc1;;
+    background-color:  #005bc1;
     color: #fff;
     padding: 1rem 2.5rem;
     text-decoration: none;
@@ -301,6 +301,32 @@ header {
 
 /* #endregion */
 
+/* #region Schedule Button *************/
+/* General Button Styles */
+
+
+/* Styles for Meeting Scheduling Button */
+.schedule-button {
+    background-color: #005bc1; /* Green button */
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.schedule-button:hover {
+    background-color: #074082;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* #endregion */
 /* #region Action Links ****************************/
 
 /* Discover Button - Default State */
@@ -1611,7 +1637,6 @@ input[type="checkbox"] {
         text-align: center;
     }
 
-
     /* Adjust the button */
     .btn.learn-more-btn {
         margin-top: 1.5rem;
@@ -2078,115 +2103,56 @@ input[type="checkbox"] {
 /* #endregion */
 
 /* #region Section-2 Styling ***********************/
+
 .contact-sec-2 {
-    padding: 50px 20px;
-    background-color: #fff; /* White background for the section */
+    padding: 4rem 2rem; /* Add padding to the section for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
 }
 
 .contact-sec-2-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
+    gap: 2rem; /* Add spacing between elements if needed */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container on the page */
 }
 
-/* Left Container */
-.contact-sec-2-left {
-    flex: 1;
-    text-align: left;
-    border-left: 4px solid #005bc1; /* Vertical line */
-    padding-left: 20px;
-}
-
-.contact-sec-2-left h2 {
-    font-size: 2rem;
-    color: #000;
-    margin-bottom: 1rem;
-    font-family: 'Outfit', sans-serif;
-}
-
-.contact-sec-2-left h2 a {
-    color: #005bc1;
-    text-decoration: none;
-    font-family: 'Outfit', sans-serif;
-}
-
-.contact-sec-2-left h2 a:hover {
-    text-decoration: underline;
-}
-
-.contact-sec-2-left p {
-    font-size: 1.2rem;
-    color: -var(--color-description);
-    line-height: 1.5;
-    font-family: 'Outfit', sans-serif;
-}
-
-/* Right Container */
 .contact-sec-2-right {
-    flex: 1;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Outfit', sans-serif;
+    width: 100%; /* Full width for the iframe container */
+    max-width: 1000px; /* Optional: Limit the iframe width for better responsiveness */
+    text-align: center; /* Center align text if needed */
 }
 
-.contact-sec-2-right form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-family: 'Outfit', sans-serif;
+.contact-sec-2-right iframe {
+    width: 100%; /* Ensure the iframe fills its container */
+    border: none; /* Remove the border around the iframe */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
-.contact-sec-2-right .form-group {
-    display: flex;
-    gap: 1rem;
-}
-
-.contact-sec-2-right input, 
-.contact-sec-2-right textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-.contact-sec-2-right button {
-    background-color: #005bc1;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-sec-2-right button:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .contact-sec-2-container {
-        flex-direction: column;
-        align-items: center;
+    .contact-sec-2 {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
     }
 
-    .contact-sec-2-left {
-        text-align: center;
-        border-left: none;
-        padding-left: 0;
+    .contact-sec-2-container {
+        gap: 1rem; /* Reduce spacing between elements */
     }
 
     .contact-sec-2-right {
-        width: 100%;
+        width: 100%; /* Full width for mobile */
+    }
+
+    .contact-sec-2-right iframe {
+        width: 100%; /* Ensure the iframe is responsive */
+        height: 500px; /* Adjust height for better fit on smaller screens */
+        border-radius: 4px; /* Slightly smaller rounded corners for mobile */
+        box-shadow: none; /* Remove shadow to simplify on smaller devices */
     }
 }
+
 
 /* #endregion */
 
