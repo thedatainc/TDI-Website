@@ -302,8 +302,6 @@ header {
 /* #endregion */
 
 /* #region Schedule Button *************/
-/* General Button Styles */
-
 
 /* Styles for Meeting Scheduling Button */
 .schedule-button {
@@ -327,6 +325,7 @@ header {
 
 
 /* #endregion */
+
 /* #region Action Links ****************************/
 
 /* Discover Button - Default State */
@@ -2105,51 +2104,107 @@ input[type="checkbox"] {
 /* #region Section-2 Styling ***********************/
 
 .contact-sec-2 {
-    padding: 4rem 2rem; /* Add padding to the section for spacing */
-    background-color: #f9f9f9; /* Light background for contrast */
+    margin-bottom: 4rem; /* Adjust the value as needed for desired spacing */
+    margin-top: 4rem;
 }
 
-.contact-sec-2-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center the content vertically */
-    gap: 2rem; /* Add spacing between elements if needed */
-    max-width: 1200px; /* Limit the width of the container */
-    margin: 0 auto; /* Center the container on the page */
+.contact-sec-2-left {
+    text-align: center; /* Center-align the text */
+    margin-bottom: 2rem; /* Add spacing below the text */
+    font-family: 'Outfit', sans-serif; /* Ensure consistent font */
 }
+
+.contact-sec-2-left h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: #005bc1; /* Optional: Adjust the text color */
+    margin-bottom: 0.5rem; /* Space between the heading and paragraph */
+}
+
+.contact-sec-2-left p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #005bc1; /* Optional: Subtle text color for the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 600px; /* Limit the width of the text for better readability */
+}
+
 
 .contact-sec-2-right {
-    width: 100%; /* Full width for the iframe container */
-    max-width: 1000px; /* Optional: Limit the iframe width for better responsiveness */
-    text-align: center; /* Center align text if needed */
+    background: #fff; /* Background for better contrast */
+    padding: 2rem;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 500px; /* Limit width for better layout */
+    margin: 0 auto; /* Center align the form */
 }
 
-.contact-sec-2-right iframe {
-    width: 100%; /* Ensure the iframe fills its container */
-    border: none; /* Remove the border around the iframe */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+.contact-sec-2-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between form elements */
 }
 
+.contact-sec-2-right .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Space between Name and Email fields */
+}
+
+.contact-sec-2-right .form-group input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensure proper width calculation */
+}
+
+.contact-sec-2-right textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none; /* Prevent resizing */
+    box-sizing: border-box;
+}
+
+.contact-submit-btn {
+    padding: 1rem;
+    background-color: #005bc1; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.contact-submit-btn:hover {
+    background-color: #003f8a; /* Darker blue on hover */
+    transform: translateY(-2px); /* Subtle lift */
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* For smaller screens */
 @media (max-width: 768px) {
-    .contact-sec-2 {
-        padding: 2rem 1rem; /* Reduce padding for smaller screens */
-    }
-
-    .contact-sec-2-container {
-        gap: 1rem; /* Reduce spacing between elements */
-    }
-
     .contact-sec-2-right {
-        width: 100%; /* Full width for mobile */
+        padding: 1rem;
     }
 
-    .contact-sec-2-right iframe {
-        width: 100%; /* Ensure the iframe is responsive */
-        height: 500px; /* Adjust height for better fit on smaller screens */
-        border-radius: 4px; /* Slightly smaller rounded corners for mobile */
-        box-shadow: none; /* Remove shadow to simplify on smaller devices */
+    .contact-sec-2-right .form-group {
+        flex-direction: column;
+        gap: 1rem; /* Space between fields in a column */
+    }
+
+    .contact-sec-2-right .form-group input {
+        width: 100%; /* Full width for inputs on smaller screens */
     }
 }
 

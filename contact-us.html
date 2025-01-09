@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png?v=1">
 </head>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZ9P8TS09S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SZ9P8TS09S');
-</script>
-
-
 <body>
     <!-- Header Section -->
     <div id="header"></div>
@@ -28,31 +15,33 @@
     <!-- Section-1 Banner -->
     <section class="contact-sec-1">
         <div class="contact-sec-banner">
-        <img src="images/Contact-Us/1.png" alt="Banner Image" class="banner-image">
+            <img src="images/Contact-Us/1.png" alt="Banner Image" class="banner-image">
             <div class="contact-banner-text">
-                
             </div>
         </div>
     </section>
 
-<!-- Section-2 -->
-<section class="contact-sec-2">
-    <div class="contact-sec-2-container">
-        <!-- Content Container -->
-        <div class="contact-sec-2-right">
-            <!-- Microsoft Bookings Link -->
-            <h2>Schedule a Meeting</h2>
-            <p>Click the button below to schedule your meeting with us through our Microsoft Bookings page.</p>
-            <a href="https://outlook.office365.com/owa/calendar/IntroductorymeetingwithTheDataInc1@thedatainc.com/bookings/" 
-               target="_blank" 
-               class="button-schedule">
-                Book a Meeting
-            </a>
+    <!-- Section-2 -->
+    <section class="contact-sec-2">
+        <div class="contact-sec-2-container">
+            <!-- Left Container -->
+            <div class="contact-sec-2-left">
+                <h2>Have a question or need support?</h2>
+                <p>Message us using the form below, and we'll be here to help you!</p>
+            </div>
+            <!-- Right Container -->
+            <div class="contact-sec-2-right">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name *" required>
+                        <input type="email" placeholder="Email *" required>
+                    </div>
+                    <textarea placeholder="Please describe what you need." rows="5" required></textarea>
+                    <button type="submit" class="contact-submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Footer Section -->
     <div id="footer"></div>
