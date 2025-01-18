@@ -99,7 +99,7 @@ if (contactForm) {
 
         try {
             // Send data to API Gateway
-            const response = await fetch('https://your-api-endpoint.amazonaws.com/submit-form', {
+            const response = await fetch('https://your-api-endpoint.amazonaws.com/submit-formhttps://3ao7ngabhh.execute-api.us-east-1.amazonaws.com/Production', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
