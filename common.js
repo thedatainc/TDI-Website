@@ -79,3 +79,44 @@ document.querySelectorAll('.service-card-section-2').forEach(card => {
     });
 });
 
+/*****************************************************
+ * Module 4: Handle Form Submission to API Gateway
+ *****************************************************/
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent form from reloading the page
+
+        // Collect form data
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            companyName: document.getElementById('companyName').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+        };
+
+        try {
+            // Send data to API Gateway
+            const response = await fetch('https://your-api-endpoint.amazonaws.com/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert('Form submitted successfully!');
+                popupForm.style.display = 'none'; // Close the pop-up
+            } else {
+                console.error('Error submitting form:', response.statusText);
+                alert('Failed to submit the form. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+}
