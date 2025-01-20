@@ -30,9 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /*****************************************************
  * Module 3: POP-UP Contact-us form
  *****************************************************/
-/*****************************************************
- * Module 3: POP-UP Contact-us form
- *****************************************************/
 const popupForm = document.getElementById('popupForm');
 const contactUsBtns = document.querySelectorAll('.learn-more-btn'); // Buttons for the popup
 const closePopupBtn = document.getElementById('closePopupForm');
@@ -120,3 +117,5 @@ if (contactForm) {
         }
     });
 }
+
+
