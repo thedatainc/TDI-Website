@@ -2130,7 +2130,6 @@ input[type="checkbox"] {
     max-width: 600px; /* Limit the width of the text for better readability */
 }
 
-
 .contact-sec-2-right {
     background: #fff; /* Background for better contrast */
     padding: 2rem;
@@ -2148,20 +2147,20 @@ input[type="checkbox"] {
 
 .contact-sec-2-right .form-group {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem; /* Space between Name and Email fields */
+    flex-direction: column;
+    gap: 1rem; /* Space between inputs */
 }
 
 .contact-sec-2-right .form-group input {
-    flex: 1;
+    width: 100%; /* Inputs take full width */
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    box-sizing: border-box; /* Ensure proper width calculation */
 }
 
 .contact-sec-2-right textarea {
+    width: 100%; /* Textarea takes full width */
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -2181,6 +2180,7 @@ input[type="checkbox"] {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
+    width: 100%; /* Button takes full width */
 }
 
 .contact-submit-btn:hover {
@@ -2192,19 +2192,9 @@ input[type="checkbox"] {
     transform: translateY(0); /* Reset on click */
 }
 
-/* For smaller screens */
 @media (max-width: 768px) {
     .contact-sec-2-right {
         padding: 1rem;
-    }
-
-    .contact-sec-2-right .form-group {
-        flex-direction: column;
-        gap: 1rem; /* Space between fields in a column */
-    }
-
-    .contact-sec-2-right .form-group input {
-        width: 100%; /* Full width for inputs on smaller screens */
     }
 }
 
