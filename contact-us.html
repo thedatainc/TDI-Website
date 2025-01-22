@@ -22,28 +22,24 @@
     </section>
 
 <!-- Section-2 -->
-<section class="contact-sec-2">
-    <div class="contact-sec-2-container">
-        <!-- Left Container -->
-        <div class="contact-sec-2-left">
-            <h2>Have a question or need support?</h2>
-            <p>Message us using the form below, and we'll be here to help you!</p>
-        </div>
-        <!-- Right Container -->
-        <div class="contact-sec-2-right">
-            <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name *" required>
-                    <input type="email" name="email" placeholder="Email *" required>
-                    <input type="phone" name="phone" placeholder="Phone *" required>
-                </div>
-                <textarea name="message" placeholder="Please describe what you need." rows="5" required></textarea>
-                <button type="submit" class="contact-submit-btn">Send Message</button>
-            </form>
-        </div>
+<div id="contactUsSection">
+    <div class="contact-sec-2-left">
+      <h2>Have a question or need support?</h2>
+      <p>Message us using the form below, and we'll be here to help you!</p>
     </div>
-</section>
-
+    <div class="contact-sec-2-right">
+      <form id="contactUsForm">
+        <div class="form-group">
+          <input type="text" name="name" id="contactName" placeholder="Name *" required>
+          <input type="email" name="email" id="contactEmail" placeholder="Email *" required>
+          <input type="phone" name="phone" id="contactPhone" placeholder="Phone *" required>
+        </div>
+        <textarea name="message" id="contactMessage" placeholder="Please describe what you need" rows="5" required></textarea>
+        <button type="submit" class="contact-submit-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+  
 
 
     <!-- Footer Section -->

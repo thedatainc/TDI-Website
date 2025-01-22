@@ -96,32 +96,33 @@ if (popupContactForm) {
 /*****************************************************
  * Module 5: Contact us Form
  *****************************************************/
+const contactUsForm = document.getElementById('contactUsForm');
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    const formData = new FormData(this);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        message: formData.get('message')
-    };
+if (contactUsForm) {
+    contactUsForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    fetch('https://kuccv46swe.execute-api.us-east-1.amazonaws.com/production/submit-contactUs', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        alert('Message sent successfully!'); // Provide feedback to the user
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Failed to send message.'); // Provide error feedback to the user
+        const formData = new FormData(this);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            message: formData.get('message'),
+        };
+
+        fetch('https://kuccv46swe.execute-api.us-east-1.amazonaws.com/production/submit-contactUs', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert('Message sent successfully!'); // Provide feedback to the user
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to send message.'); // Provide error feedback to the user
+            });
     });
-});
+}
