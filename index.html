@@ -838,35 +838,36 @@
     <div data-include-html="footer.html"></div>
 
 <!------------------------------------------------------- Pop-Up Form ------------------------------------------------------->
-<div id="popupForm" class="popup-form-container" style="display:none;">
+<div id="popupForm1" class="popup-form-container" style="display:none;">
   <div class="popup-form">
-    <span class="close-btn" id="closePopupForm">&times;</span>
+    <span class="close-btn" id="closePopupForm1">&times;</span>
     <h2>Submit Your Details</h2>
     
-    <form id="contactForm">
+    <form id="popupContactForm">
       <div class="form-group">
-        <label for="firstName">Name *</label>
+        <label for="popupFirstName">Name *</label>
         <div class="form-row">
-          <input type="text" id="firstName" name="firstName" placeholder="First" required>
-          <input type="text" id="lastName" name="lastName" placeholder="Last" required>
+          <input type="text" id="popupFirstName" name="firstName" placeholder="First" required>
+          <input type="text" id="popupLastName" name="lastName" placeholder="Last" required>
         </div>
       </div>
       <div class="form-group">
-        <label for="companyName">Company Name *</label>
-        <input type="text" id="companyName" name="companyName" required>
+        <label for="popupCompanyName">Company Name *</label>
+        <input type="text" id="popupCompanyName" name="companyName" required>
       </div>
       <div class="form-group">
-        <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" required>
+        <label for="popupPhone">Phone *</label>
+        <input type="tel" id="popupPhone" name="phone" required>
       </div>
       <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+        <label for="popupEmail">Email *</label>
+        <input type="email" id="popupEmail" name="email" required>
       </div>
       <button type="submit" class="submit-btn">Submit</button>
     </form>
   </div>
 </div>
+
 
 <!----------------------------------------------------- Java Script ------------------------------------------->
 <script src="common.js"></script>

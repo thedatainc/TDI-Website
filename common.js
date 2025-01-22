@@ -30,83 +30,56 @@ document.addEventListener("DOMContentLoaded", function () {
 /*****************************************************
  * Module 3: POP-UP Contact-us form
  *****************************************************/
-const popupForm = document.getElementById('popupForm');
-const contactUsBtns = document.querySelectorAll('.learn-more-btn'); // Buttons for the popup
-const closePopupBtn = document.getElementById('closePopupForm');
+const popupForm1 = document.getElementById('popupForm1');
+const contactUsBtns1 = document.querySelectorAll('.learn-more-btn'); // Buttons for the popup
+const closePopupBtn1 = document.getElementById('closePopupForm1');
 
 // Open the popup when "Book a Call" buttons are clicked
-contactUsBtns.forEach(button => {
+contactUsBtns1.forEach(button => {
     button.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent default behavior
-        popupForm.style.display = 'flex'; // Show the popup
+        popupForm1.style.display = 'flex'; // Show the popup
     });
 });
 
 // Close the popup when the "X" button is clicked
-closePopupBtn.addEventListener('click', () => {
-    popupForm.style.display = 'none'; // Hide the popup
+closePopupBtn1.addEventListener('click', () => {
+    popupForm1.style.display = 'none'; // Hide the popup
 });
 
 // Close the popup when clicking outside of the form
 window.addEventListener('click', (event) => {
-    if (event.target === popupForm) {
-        popupForm.style.display = 'none'; // Hide the popup
+    if (event.target === popupForm1) {
+        popupForm1.style.display = 'none'; // Hide the popup
     }
-});
-
-// Allow "Discover now →" links to work as intended
-document.querySelectorAll('.action-link').forEach(link => {
-    link.addEventListener('click', (event) => {
-        console.log('Action link clicked:', link.href); // Debug log
-        event.stopPropagation(); // Prevent the click from bubbling up
-        popupForm.style.display = 'none'; // Ensure popup is closed
-    });
-});
-
-// Prevent clicks on service cards from triggering unintended behavior
-document.querySelectorAll('.service-card-section-2').forEach(card => {
-    card.addEventListener('click', (event) => {
-        console.log('Clicked on:', event.target); // Debug log
-        if (event.target.tagName === 'A') {
-            // Allow links inside the card to function normally
-            return;
-        }
-        event.preventDefault(); // Prevent default behavior for other clicks
-        event.stopPropagation(); // Prevent propagation
-    });
 });
 
 /*****************************************************
  * Module 4: Handle Form Submission to API Gateway
  *****************************************************/
-const contactForm = document.getElementById('contactForm');
+const popupContactForm = document.getElementById('popupContactForm');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', async (event) => {
+if (popupContactForm) {
+    popupContactForm.addEventListener('submit', async (event) => {
         event.preventDefault(); // Prevent form from reloading the page
 
-        // Collect form data
         const formData = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            companyName: document.getElementById('companyName').value,
-            phone: document.getElementById('phone').value,
-            email: document.getElementById('email').value,
+            firstName: document.getElementById('popupFirstName').value,
+            lastName: document.getElementById('popupLastName').value,
+            companyName: document.getElementById('popupCompanyName').value,
+            phone: document.getElementById('popupPhone').value,
+            email: document.getElementById('popupEmail').value,
         };
 
         try {
-            // Send data to API Gateway
             const response = await fetch('https://3ao7ngabhh.execute-api.us-east-1.amazonaws.com/Production/submit-form', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
 
             if (response.ok) {
-                // Close the pop-up
-                popupForm.style.display = 'none';
+                popupForm1.style.display = 'none'; // Close the popup
             } else {
                 console.error('Error submitting form:', response.statusText);
                 alert('Failed to submit the form. Please try again.');
@@ -117,6 +90,7 @@ if (contactForm) {
         }
     });
 }
+
 
 
 /*****************************************************
