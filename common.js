@@ -105,8 +105,8 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                alert('Form submitted successfully!');
-                popupForm.style.display = 'none'; // Close the pop-up
+                // Close the pop-up
+                popupForm.style.display = 'none';
             } else {
                 console.error('Error submitting form:', response.statusText);
                 alert('Failed to submit the form. Please try again.');
@@ -118,8 +118,9 @@ if (contactForm) {
     });
 }
 
+
 /*****************************************************
- * Module 5: Contact us
+ * Module 5: Contact us Form
  *****************************************************/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
