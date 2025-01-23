@@ -58,6 +58,8 @@ window.addEventListener('click', (event) => {
  * Module 4: Handle Form Submission to API Gateway
  *****************************************************/
 const popupContactForm = document.getElementById('popupContactForm');
+const popupHeading = document.getElementById('popupHeading');
+const popupSuccessMessage = document.getElementById('popupSuccessMessage');
 
 if (popupContactForm) {
     popupContactForm.addEventListener('submit', async (event) => {
@@ -79,7 +81,20 @@ if (popupContactForm) {
             });
 
             if (response.ok) {
-                popupForm1.style.display = 'none'; // Close the popup
+                // Hide the form and show the success message
+                popupContactForm.style.display = 'none';
+                popupHeading.style.display = 'none';
+                popupSuccessMessage.style.display = 'block';
+
+                // Wait for 2-3 seconds, then close the popup
+                setTimeout(() => {
+                    popupForm1.style.display = 'none'; // Close the popup
+                    // Reset the form and UI for next time
+                    popupContactForm.reset();
+                    popupContactForm.style.display = 'block';
+                    popupHeading.style.display = 'block';
+                    popupSuccessMessage.style.display = 'none';
+                }, 3000); // 3-second delay
             } else {
                 console.error('Error submitting form:', response.statusText);
                 alert('Failed to submit the form. Please try again.');
@@ -90,6 +105,7 @@ if (popupContactForm) {
         }
     });
 }
+
 
 
 
