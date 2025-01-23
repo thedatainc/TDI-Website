@@ -452,6 +452,14 @@ input[type="checkbox"] {
     background-color: #003d5c;
 }
 
+#popupSuccessMessage {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 8px;
+  }
+  
+
 @media (max-width: 768px) {
     /* Pop-up Form Container */
     .popup-form-container {
