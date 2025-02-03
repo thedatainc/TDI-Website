@@ -26,10 +26,71 @@ document.addEventListener("DOMContentLoaded", function () {
     includeHTML();
 });
 
+
+/*****************************************************
+ * Module 3: POP-UP Contact-us form with Bitrix CRM Form
+ *****************************************************/
+const popupForm1 = document.getElementById('popupForm1');
+const contactUsBtns1 = document.querySelectorAll('.learn-more-btn'); // Buttons for the popup
+const closePopupBtn1 = document.getElementById('closePopupForm1');
+const bitrixFormContainer = document.getElementById('bitrixFormContainer');
+
+// Open the popup when "Book a Call" buttons are clicked
+contactUsBtns1.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default behavior
+        popupForm1.style.display = 'flex'; // Show the popup
+
+        // Load Bitrix form only if it's not already loaded
+        if (!bitrixFormContainer.innerHTML.trim()) {
+            loadBitrixForm();
+        }
+    });
+});
+
+// Close the popup when the "X" button is clicked
+closePopupBtn1.addEventListener('click', () => {
+    closePopup();
+});
+
+// Close the popup when clicking outside of the form
+window.addEventListener('click', (event) => {
+    if (event.target === popupForm1) {
+        closePopup();
+    }
+});
+
+// Function to load the Bitrix form script dynamically
+function loadBitrixForm() {
+    const script = document.createElement('script');
+    script.setAttribute('data-b24-form', 'inline/2/7my8zz');
+    script.setAttribute('data-skip-moving', 'true');
+    script.async = true;
+    script.src = 'https://cdn.bitrix24.com/b32396671/crm/form/loader_2.js?' + (Date.now() / 180000 | 0);
+    bitrixFormContainer.appendChild(script);
+}
+
+// Listen for the Bitrix form submission and hide the popup after submission
+window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'b24-form-submit') {
+        setTimeout(() => {
+            closePopup();
+        }, 3000); // Close popup 3 seconds after submission
+    }
+});
+
+// Function to close the popup
+function closePopup() {
+    popupForm1.style.display = 'none'; // Hide the popup
+}
+
+
+
   
 /*****************************************************
  * Module 3: POP-UP Contact-us form
  *****************************************************/
+/*
 const popupForm1 = document.getElementById('popupForm1');
 const contactUsBtns1 = document.querySelectorAll('.learn-more-btn'); // Buttons for the popup
 const closePopupBtn1 = document.getElementById('closePopupForm1');
@@ -54,9 +115,11 @@ window.addEventListener('click', (event) => {
     }
 });
 
+
 /*****************************************************
  * Module 4: Handle Form Submission to API Gateway
  *****************************************************/
+/*
 const popupContactForm = document.getElementById('popupContactForm');
 const popupHeading = document.getElementById('popupHeading');
 const popupSuccessMessage = document.getElementById('popupSuccessMessage');
