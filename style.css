@@ -1004,7 +1004,7 @@ input[type="checkbox"] {
 
 /* Hover Effect */
 .play-button:hover {
-    transform: scale(1.1) translateY(-5px); /* Enlarges and moves upward */
+    transform: translate(-50%, -50%) scale(0.8); /* Keep the translation and add scale */
     background-color: #e63939; /* Slightly darker red */
 }
 
