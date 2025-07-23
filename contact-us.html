@@ -71,12 +71,11 @@
     responseDiv.innerHTML = "Processing…";
 
     try {
-      const res = await fetch("https://01969c9a8acc.ngrok-free.app/scrape", {
+      const res = await fetch("https://4e1a1ddd1f9e.ngrok-free.app/scrape", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url })
       });
-      
 
       if (!res.ok) throw new Error("Scraper failed");
 
@@ -88,6 +87,7 @@
     }
   });
 </script>
+
 
 </body>
 </html>
