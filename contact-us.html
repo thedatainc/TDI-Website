@@ -50,40 +50,6 @@
 
     <script src="common.js"></script> <!-- Include script for dynamic header/footer -->
 
-<form id="scrape-form">
-  <label for="url">Enter Product URL:</label>
-  <input type="text" id="url" placeholder="https://..." required />
-  <button type="submit">Generate CSV</button>
-</form>
-
-<div id="response"></div>
-
-<script>
-  const form = document.getElementById("scrape-form");
-  const responseDiv = document.getElementById("response");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const url = document.getElementById("url").value;
-    responseDiv.innerHTML = "Processing…";
-
-    try {
-      const res = await fetch("http://localhost:5000/scrape", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url })
-      });
-
-      if (!res.ok) throw new Error("Scraper failed");
-
-      const blob = await res.blob();
-      const csvUrl = window.URL.createObjectURL(blob);
-      responseDiv.innerHTML = `<a href="${csvUrl}" download="scraped.csv">Download CSV</a>`;
-    } catch (err) {
-      responseDiv.innerText = "Error: " + err.message;
-    }
-  });
-</script>
 
 <!-- Scraping -->
 
