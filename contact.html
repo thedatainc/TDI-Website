@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · The Data Inc</title>
+<meta name="description" content="Discuss your project with The Data Inc. Send a message or book a 30-minute discovery call.">
+<link rel="canonical" href="https://thedatainc.com/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Data Inc">
+<meta property="og:title" content="Contact · The Data Inc">
+<meta property="og:description" content="Discuss your project with The Data Inc. Send a message or book a 30-minute discovery call.">
+<meta property="og:url" content="https://thedatainc.com/contact.html">
+<meta property="og:image" content="https://thedatainc.com/img/tdi-logo.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div data-page="contact">
+<header id="site-header"></header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1 class="h1" style="font-size:clamp(38px,5vw,60px)">Discuss your project.</h1>
+    <p class="lead">Every message goes straight to Atif, TDI's director.</p>
+  </div>
+</section>
+
+<section class="band tight">
+  <div class="wrap hero-grid" style="align-items:flex-start">
+    <div class="hero-copy" style="flex-basis:520px">
+      <form class="panel form" id="contact-form" action="https://formspree.io/f/mqpejgdl" method="POST" novalidate>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name"><span class="err" id="c-name-err"></span></div>
+        <div class="field"><label for="c-email">Work email</label><input id="c-email" name="email" type="email" autocomplete="email"><span class="err" id="c-email-err"></span></div>
+        <div class="field"><label for="c-company">Company</label><input id="c-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="c-topic">I'm interested in</label>
+          <select id="c-topic" name="topic">
+            <option>Platform &amp; SaaS Development</option>
+            <option>Data Engineering</option>
+            <option>AI &amp; Automation</option>
+            <option>E-commerce Data Operations</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field full"><label for="c-message">What are you trying to fix?</label><textarea id="c-message" name="message"></textarea><span class="err" id="c-message-err"></span></div>
+        <div class="field full"><button class="btn btn-primary" type="submit" id="c-submit" style="align-self:flex-start">Send message</button><span class="err" id="c-send-err" role="alert"></span><span class="muted small">Interested in OMNIcrt? <a class="link ext" href="https://www.omnicrt.com">Request a demo on omnicrt.com</a></span></div>
+      </form>
+      <div class="notice stack" id="form-done" hidden style="gap:12px">
+        <h2 class="h3">Thanks, <span id="done-name"></span>.</h2>
+        <p class="muted small">Your message has been sent. Atif will reply from atif@thedatainc.com, usually within one working day.</p>
+        <button class="btn btn-ghost" id="form-again" type="button" style="align-self:flex-start">Send another</button>
+      </div>
+    </div>
+    <aside class="hero-side stack" style="gap:20px">
+      <div class="panel founder" id="book">
+        <span class="eyebrow">Prefer to talk?</span>
+        <h2 class="h3">30-minute discovery call</h2>
+        <p class="muted small">Pick a time that suits you. We will cover your goal, your data and a realistic plan.</p>
+        <a class="btn btn-primary" href="https://bookings.cloud.microsoft/bookwithme/user/3407950c4c4241c48c9a967bc1e74b00@thedatainc.com/meetingtype/P2RBpskH3EyDEbTDHn4jbQ2?anonymous" target="_blank" rel="noopener" style="align-self:flex-start">Open booking calendar</a>
+      </div>
+      <div class="panel founder">
+        <span class="eyebrow">Direct</span>
+        <div class="stack" style="gap:6px"><span class="foot-label">EMAIL</span><span style="user-select:all">atif@thedatainc.com</span><button class="btn btn-ghost" type="button" data-copy="atif@thedatainc.com" style="align-self:flex-start; min-height:40px; padding:8px 16px; font-size:14px">Copy email</button></div>
+        <div class="stack" style="gap:6px"><span class="foot-label">OFFICE</span><span>Coventry, United Kingdom</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
