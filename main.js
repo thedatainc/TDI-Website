@@ -5,7 +5,7 @@
   var links = [
     ['products.html', 'Products', 'products'],
     ['services.html', 'Services', 'services'],
-    ['ecommerce.html', 'E-commerce', 'ecommerce'],
+    ['marketplace-data.html', 'Marketplace Data', 'marketplace'],
     ['about.html', 'About', 'about'],
     ['contact.html', 'Contact', 'contact']
   ];
@@ -37,7 +37,7 @@
     footer.innerHTML =
       '<div class="wrap"><div class="foot-grid">' +
       '<div><img src="img/tdi-mark-light.png" alt="" width="44" height="49" style="margin-bottom:6px"><span class="brand-name">The Data Inc</span><span class="muted">Turning data into decisions.</span><span class="chips" style="margin-top:6px"><span class="chip">UK</span><span class="chip">USA</span><span class="chip">KSA</span></span></div>' +
-      '<div><span class="foot-label">COMPANY</span><a href="services.html">Services</a><a href="ecommerce.html">E-commerce data</a><a href="products.html">Products</a><a href="about.html">About</a><a class="ext" href="https://www.omnicrt.com">OMNIcrt</a></div>' +
+      '<div><span class="foot-label">COMPANY</span><a href="services.html">Services</a><a href="marketplace-data.html">Marketplace data</a><a href="products.html">Products</a><a href="about.html">About</a><a class="ext" href="https://www.omnicrt.com">OMNIcrt</a></div>' +
       '<div><span class="foot-label">CONTACT</span><span>atif@thedatainc.com</span><span>Coventry, United Kingdom</span></div>' +
       '<div><span class="foot-label">FOLLOW</span><a href="https://www.linkedin.com/company/the-data-inc/" target="_blank" rel="noopener">LinkedIn</a></div>' +
       '</div><div class="legal"><span>© 2026 THEDATAINC LTD. Registered in England &amp; Wales, Company No. 16241687.</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div></div>';
